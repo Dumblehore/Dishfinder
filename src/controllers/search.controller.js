@@ -81,9 +81,22 @@ exports.searchDishes = async (req, res) => {
             finalResults = searchResults.map(result => {
                 const dishObj = result.item;
                 dishObj.searchScore = result.score;
+                
+                // Smart penalty: If the query matches a substring but NOT a word boundary 
+                // e.g. "ice" inside "rice", we heavily penalize the score.
+                const hasWordMatch = new RegExp(`\\b${q}\\b`, 'i').test(dishObj.normalized_name) || 
+                                     dishObj.synonyms.some(s => new RegExp(`\\b${q}\\b`, 'i').test(s));
+                
+                if (!hasWordMatch) {
+                    dishObj.searchScore += 0.4; // Push it to the bottom
+                }
+                
                 return dishObj;
             });
             
+            // Filter out anything that had a terrible score (like penalized substrings)
+            finalResults = finalResults.filter(dish => dish.searchScore < 0.5);
+
             if (finalResults.length === 0) {
                 // Empty state handling logic
                 return res.json({ 

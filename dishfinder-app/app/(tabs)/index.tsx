@@ -40,7 +40,7 @@ export default function SearchScreen() {
         {/* Results List */}
         <FlatList
           data={results}
-          keyExtractor={(item) => item._id}
+          keyExtractor={(item, index) => item._id ? String(item._id) : String(index)}
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => <DishCard item={item} />}

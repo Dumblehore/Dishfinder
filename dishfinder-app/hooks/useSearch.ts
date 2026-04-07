@@ -6,7 +6,7 @@ const API_BASE_URL = 'http://localhost:5000';
 
 export function useSearch() {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

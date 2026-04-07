@@ -401,7 +401,6 @@ const dishes = [
         is_rare: true,
     },
 ];
-
 const seedDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);
@@ -409,7 +408,6 @@ const seedDB = async () => {
 
         await Dish.deleteMany({});
         console.log('Cleared existing data');
-
         // Map the flat latitude/longitude to the GeoJSON location format Mongoose expects
         const formattedDishes = dishes.map(dish => ({
             ...dish,
@@ -418,10 +416,8 @@ const seedDB = async () => {
                 coordinates: [dish.longitude, dish.latitude] // Remember: [lng, lat]
             }
         }));
-
         await Dish.insertMany(formattedDishes);
         console.log(`Successfully seeded ${dishes.length} dishes`);
-
         mongoose.connection.close();
         console.log('Done! Connection closed.');
     } catch (error) {
@@ -429,5 +425,4 @@ const seedDB = async () => {
         process.exit(1);
     }
 };
-
 seedDB();

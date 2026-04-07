@@ -70,7 +70,8 @@ exports.searchDishes = async (req, res) => {
             const fuseOptions = {
                 keys: ['normalized_name', 'synonyms'],
                 includeScore: true,
-                threshold: 0.4 // 0.0 requires perfect match, 1.0 matches anything
+                threshold: 0.2, // Lowered from 0.4 to prevent "ice" matching "rice"
+                ignoreLocation: true // Forces it to evaluate the whole word rather than arbitrary substrings
             };
             
             const fuse = new Fuse(nearbyDishes, fuseOptions);

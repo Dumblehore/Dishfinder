@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 // Using localhost works for iOS Simulator, but Android Emulator needs 10.0.2.2!
 // If testing on a physical phone via Expo Go, you MUST use your computer's local IP (e.g. 192.168.1.15)
-const API_BASE_URL = 'http://localhost:5000'; 
+const API_BASE_URL = 'https://dishfinder-uez2.onrender.com'; 
 
 export function useSearch() {
   const [query, setQuery] = useState('');

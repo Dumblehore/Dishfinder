@@ -88,7 +88,13 @@ exports.searchDishes = async (req, res) => {
                                      dishObj.synonyms.some(s => new RegExp(`\\b${q}\\b`, 'i').test(s));
                 
                 if (!hasWordMatch) {
-                    dishObj.searchScore += 0.4; // Push it to the bottom
+                    // For short words like 'ice', 'egg', 'tea', substring matches like "rice" are usually false positives.
+                    if (q.length <= 4) {
+                        dishObj.searchScore = 1.0; // Instant death. Purged completely.
+                    } else {
+                        // For larger words (e.g. "Pahad" typed out for "Pahadi"), we let it survive to support partial typing
+                        dishObj.searchScore += 0.2; 
+                    }
                 }
                 
                 return dishObj;

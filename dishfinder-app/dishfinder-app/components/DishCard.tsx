@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Linking, Platform } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Linking, Platform, Share } from 'react-native';
+import { router } from 'expo-router';
 import { useFavorites } from '../hooks/useFavorites';
 
 // Card header tint based on dish type
@@ -37,33 +38,55 @@ export default function DishCard({ item }: { item: any }) {
     ? `${(item.distance / 1000).toFixed(1)} km`
     : `${Math.round(item.distance)} m`;
 
-  const topTint = getTopTint(item.dish_name);
+  const topTint    = getTopTint(item.dish_name);
   const bottomTint = getBottomTint(item.dish_name);
   const { isFavorited, toggleFavorite } = useFavorites();
-  const favorited = isFavorited(item._id);
+  const favorited  = isFavorited(item._id);
 
+  // ── Open Google Maps for directions only ──────────────────────────────────
   const openMaps = () => {
     if (!item.location?.coordinates) return;
     const [lng, lat] = item.location.coordinates;
     const url = Platform.select({
-      ios: `googlemaps://?daddr=${lat},${lng}&directionsmode=driving`,
+      ios:     `googlemaps://?daddr=${lat},${lng}&directionsmode=driving`,
       android: `google.navigation:q=${lat},${lng}`,
     }) || `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
-    Linking.canOpenURL(url).then(s => Linking.openURL(s ? url : `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`));
+    Linking.canOpenURL(url).then(supported =>
+      Linking.openURL(supported ? url : `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`)
+    );
+  };
+
+  // ── Navigate to restaurant detail screen ──────────────────────────────────
+  const openDetail = () => {
+    router.push({
+      pathname: '/restaurant/[name]',
+      params: {
+        name:       item.restaurant_name,
+        lat:        item.location?.coordinates?.[1],
+        lng:        item.location?.coordinates?.[0],
+        dishId:     item._id,
+      },
+    });
+  };
+
+  // ── Share this dish ───────────────────────────────────────────────────────
+  const shareDish = () => {
+    Share.share({
+      message: `🍽️ ${item.dish_name} at ${item.restaurant_name} for ₹${item.price} — found on DishFinder!`,
+    });
   };
 
   return (
-    <TouchableOpacity activeOpacity={0.85} onPress={openMaps} style={styles.card}>
-      {/* ── Colored header block (no image) ── */}
+    <TouchableOpacity activeOpacity={0.88} onPress={openDetail} style={styles.card}>
+      {/* ── Colored header block ── */}
       <View style={[styles.imageArea, { backgroundColor: topTint }]}>
-
         {/* Rating badge — top right */}
         <View style={styles.ratingBadge}>
           <Text style={styles.ratingStar}>★</Text>
           <Text style={styles.ratingValue}>{item.rating.toFixed(1)}</Text>
         </View>
 
-        {/* Dish name — bottom left over photo */}
+        {/* Dish name — bottom left */}
         <View style={styles.imageOverlay}>
           <Text style={styles.dishNameLarge} numberOfLines={2}>{item.dish_name}</Text>
         </View>
@@ -93,20 +116,32 @@ export default function DishCard({ item }: { item: any }) {
           </View>
         )}
 
-        {/* Price + CTA + Heart */}
+        {/* Price + actions row */}
         <View style={[styles.row, { marginTop: 16 }]}>
           <Text style={styles.price}>₹{item.price}</Text>
           <View style={styles.ctaRow}>
+            {/* Share */}
+            <TouchableOpacity style={styles.iconBtn} onPress={shareDish} activeOpacity={0.7}>
+              <Text style={styles.iconBtnText}>↗</Text>
+            </TouchableOpacity>
+
+            {/* Favourite heart */}
             <TouchableOpacity
-              style={[styles.heartBtn, favorited && styles.heartBtnActive]}
+              style={[styles.iconBtn, favorited && styles.heartBtnActive]}
               onPress={() => toggleFavorite(item)}
               activeOpacity={0.7}
             >
-              <Text style={[styles.heartIcon, favorited && styles.heartIconActive]}>
+              <Text style={[styles.iconBtnText, favorited && styles.heartIconActive]}>
                 {favorited ? '♥' : '♡'}
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.ctaBtn} onPress={openMaps}>
+
+            {/* Directions — ONLY this opens maps */}
+            <TouchableOpacity
+              style={styles.ctaBtn}
+              onPress={e => { e.stopPropagation?.(); openMaps(); }}
+              activeOpacity={0.8}
+            >
               <Text style={styles.ctaBtnText}>DIRECTIONS →</Text>
             </TouchableOpacity>
           </View>
@@ -128,22 +163,11 @@ const styles = StyleSheet.create({
     shadowRadius: 20,
     elevation: 12,
   },
-
-  // Image area — top of the card
   imageArea: {
     height: 200,
     justifyContent: 'space-between',
     padding: 16,
     overflow: 'hidden',
-  },
-  image: {
-    ...StyleSheet.absoluteFillObject, // fills the whole imageArea
-    width: '100%',
-    height: '100%',
-  },
-  overlay: {
-    ...StyleSheet.absoluteFillObject, // sits on top of the image
-    backgroundColor: 'rgba(0,0,0,0.45)', // dark tint so text pops
   },
   ratingBadge: {
     flexDirection: 'row',
@@ -157,12 +181,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(173,199,255,0.3)',
   },
-  ratingStar: { color: '#adc7ff', fontSize: 14, fontWeight: '700' },
+  ratingStar:  { color: '#adc7ff', fontSize: 14, fontWeight: '700' },
   ratingValue: { color: '#e2e2e5', fontSize: 13, fontWeight: '700' },
-
-  imageOverlay: {
-    justifyContent: 'flex-end',
-  },
+  imageOverlay: { justifyContent: 'flex-end' },
   dishNameLarge: {
     fontSize: 26,
     fontWeight: '800',
@@ -172,24 +193,9 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 8,
   },
-
-  // Details card below
-  detailCard: {
-    padding: 16,
-    paddingTop: 14,
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  restaurantName: {
-    fontSize: 14,
-    color: '#c1c6d7',
-    fontWeight: '500',
-    flex: 1,
-    marginRight: 8,
-  },
+  detailCard: { padding: 16, paddingTop: 14 },
+  row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  restaurantName: { fontSize: 14, color: '#c1c6d7', fontWeight: '500', flex: 1, marginRight: 8 },
   distancePill: {
     backgroundColor: 'rgba(173,199,255,0.12)',
     borderRadius: 20,
@@ -198,68 +204,30 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(173,199,255,0.25)',
   },
-  distanceText: {
-    color: '#adc7ff',
-    fontSize: 12,
-    fontWeight: '700',
-  },
-  tagsRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 6,
-    marginTop: 10,
-  },
-  tagPill: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
+  distanceText: { color: '#adc7ff', fontSize: 12, fontWeight: '700' },
+  tagsRow:  { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 10 },
+  tagPill:  { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20 },
+  tagText:  { fontSize: 11, fontWeight: '700' },
+  price:    { fontSize: 24, fontWeight: '800', color: '#adc7ff', letterSpacing: -0.5 },
+  ctaRow:   { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  iconBtn: {
+    width: 40,
+    height: 40,
     borderRadius: 20,
-  },
-  tagText: {
-    fontSize: 11,
-    fontWeight: '700',
-  },
-  price: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#adc7ff',
-    letterSpacing: -0.5,
-  },
-  ctaBtn: {
-    backgroundColor: '#adc7ff',
-    borderRadius: 20,
-    paddingHorizontal: 18,
-    paddingVertical: 10,
-  },
-  ctaBtnText: {
-    color: '#002e68',
-    fontSize: 12,
-    fontWeight: '800',
-    letterSpacing: 0.5,
-  },
-  ctaRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-  },
-  heartBtn: {
-    width: 42,
-    height: 42,
-    borderRadius: 21,
     backgroundColor: 'rgba(255,255,255,0.08)',
     borderWidth: 1.5,
     borderColor: 'rgba(255,255,255,0.15)',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  heartBtnActive: {
-    backgroundColor: 'rgba(255, 82, 82, 0.2)',
-    borderColor: '#ff5252',
+  iconBtnText:    { fontSize: 18, color: 'rgba(255,255,255,0.5)' },
+  heartBtnActive: { backgroundColor: 'rgba(255, 82, 82, 0.2)', borderColor: '#ff5252' },
+  heartIconActive:{ color: '#ff5252' },
+  ctaBtn: {
+    backgroundColor: '#adc7ff',
+    borderRadius: 20,
+    paddingHorizontal: 18,
+    paddingVertical: 10,
   },
-  heartIcon: {
-    fontSize: 20,
-    color: 'rgba(255,255,255,0.5)',
-  },
-  heartIconActive: {
-    color: '#ff5252',
-  },
+  ctaBtnText: { color: '#002e68', fontSize: 12, fontWeight: '800', letterSpacing: 0.5 },
 });

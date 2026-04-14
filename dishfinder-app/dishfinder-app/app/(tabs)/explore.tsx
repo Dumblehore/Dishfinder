@@ -3,11 +3,11 @@ import {
   View, Text, StyleSheet, SafeAreaView, FlatList,
   TouchableOpacity, ActivityIndicator, StatusBar, ScrollView
 } from 'react-native';
+import { useLocation } from '../../hooks/useLocation';
 import DishCard from '../../components/DishCard';
+import SkeletonCard from '../../components/SkeletonCard';
 
 const API_BASE_URL = 'https://dishfinder-uez2.onrender.com';
-const LAT = 30.3951;
-const LNG = 78.0831;
 
 const COLORS = {
   background: '#121416',
@@ -40,10 +40,10 @@ export default function ExploreScreen() {
   const [selected, setSelected] = useState<string | null>(null);
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const { coords } = useLocation();
 
   const handleCategory = async (query: string) => {
     if (selected === query) {
-      // Deselect
       setSelected(null);
       setResults([]);
       return;
@@ -52,7 +52,7 @@ export default function ExploreScreen() {
     setLoading(true);
     setResults([]);
     try {
-      const url = `${API_BASE_URL}/api/search?lat=${LAT}&lng=${LNG}&q=${encodeURIComponent(query)}`;
+      const url = `${API_BASE_URL}/api/search?lat=${coords.lat}&lng=${coords.lng}&q=${encodeURIComponent(query)}`;
       const res = await fetch(url);
       const data = await res.json();
       setResults(data.results || []);
@@ -110,9 +110,10 @@ export default function ExploreScreen() {
           <Text style={styles.emptySub}>Tap any category above to browse dishes near you</Text>
         </View>
       ) : loading ? (
-        <View style={styles.loadingState}>
-          <ActivityIndicator color={COLORS.primary} size="large" />
-          <Text style={styles.loadingText}>Finding {selectedCategory?.label} near you...</Text>
+        <View style={{ paddingHorizontal: 16, paddingTop: 8 }}>
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
         </View>
       ) : results.length === 0 ? (
         <View style={styles.emptyState}>

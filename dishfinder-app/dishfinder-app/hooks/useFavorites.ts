@@ -29,5 +29,10 @@ export function useFavorites() {
     });
   }, []);
 
-  return { favorites, isFavorited, toggleFavorite };
+  const clearAllFavorites = useCallback(async () => {
+    setFavorites([]);
+    await AsyncStorage.removeItem(STORAGE_KEY);
+  }, []);
+
+  return { favorites, isFavorited, toggleFavorite, clearAllFavorites };
 }

@@ -63,6 +63,19 @@ exports.searchDishes = async (req, res) => {
 
         let finalResults = nearbyDishes;
 
+        // ── DEDUPLICATION ──────────────────────────────────────────────────────
+        // If the seed script was run multiple times, the same dish from the same
+        // restaurant may appear more than once. Keep only the first occurrence
+        // of each unique (dish_name + restaurant_name) pair.
+        const seen = new Set();
+        finalResults = finalResults.filter(dish => {
+            const key = `${dish.dish_name?.toLowerCase()}|${dish.restaurant_name?.toLowerCase()}`;
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+        });
+        // ──────────────────────────────────────────────────────────────────────
+
         // 2. Perform fuzzy search client-side (Node.js) if a query was provided
         // Since we installed fuse.js, we can do nice typo-tolerant matching in-memory 
         // on the already geo-filtered subset of data.

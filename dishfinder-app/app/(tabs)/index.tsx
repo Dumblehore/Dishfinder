@@ -1,25 +1,26 @@
-import React from 'react';
-import { View, Text, TextInput, FlatList, StyleSheet, SafeAreaView, ActivityIndicator } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, FlatList, StyleSheet, SafeAreaView, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { useSearch } from '../../hooks/useSearch';
 import DishCard from '../../components/DishCard';
 
 export default function SearchScreen() {
   const { query, setQuery, results, loading, error } = useSearch();
+  const [isFocused, setIsFocused] = useState(false);
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        
+
         {/* Header / Search Bar */}
         <View style={styles.header}>
           <Text style={styles.title}>Dish<Text style={styles.titleAccent}>Finder</Text></Text>
-          <Text style={styles.subtitle}>Discover specific dishes across your city.</Text>
-          
+          <Text style={styles.subtitle}>Discover specific dishes in your city.</Text>
+
           <View style={styles.searchContainer}>
             <Text style={styles.searchIcon}>🔍</Text>
             <TextInput
               style={styles.searchInput}
-              placeholder="Craving something specific? (e.g. Momos)"
+              placeholder="Craving something specific?"
               placeholderTextColor="#888"
               value={query}
               onChangeText={setQuery}
@@ -31,10 +32,10 @@ export default function SearchScreen() {
 
         {/* Status / Error Messages */}
         {error && (
-            <View style={styles.errorBox}>
-              <Text style={styles.errorText}>{error}</Text>
-              <Text style={styles.errorSubtext}>Check console or useSearch.ts for IP setup!</Text>
-            </View>
+          <View style={styles.errorBox}>
+            <Text style={styles.errorText}>{error}</Text>
+            <Text style={styles.errorSubtext}>Check console or useSearch.ts for IP setup!</Text>
+          </View>
         )}
 
         {/* Results List */}

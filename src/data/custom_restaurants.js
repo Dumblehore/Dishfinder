@@ -1,7 +1,3 @@
-// 📍 RESTAURANT DATABASE
-// Write the restaurant's name and coordinates ONCE here.
-// You never have to type the latitude or longitude again!
-
 const RESTAURANT_LOCATIONS = {
     'Tibet Kitchen': {
         latitude: 30.39748130908176,
@@ -23,8 +19,5 @@ const RESTAURANT_LOCATIONS = {
         longitude: 78.07834729445716,
         rating: 4.8
     }
-    // Add more restaurants here whenever you find a new one:
-    // 'New Awesome Cafe': { latitude: 30.123, longitude: 78.123, rating: 4.0 },
 };
-
 module.exports = RESTAURANT_LOCATIONS;

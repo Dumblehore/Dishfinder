@@ -5,17 +5,17 @@ export default function DishCard({ item }: { item: any }) {
 
   // A tiny helper to pick tag colors purely based on text
   const getTagStyle = (tag: string) => {
-    switch(tag) {
-      case 'Closest': return { backgroundColor: 'rgba(40, 167, 69, 0.2)', color: '#4ade80' };
-      case 'Cheapest': return { backgroundColor: 'rgba(0, 123, 255, 0.2)', color: '#60a5fa' };
-      case 'Best Value': return { backgroundColor: 'rgba(255, 193, 7, 0.2)', color: '#fcd34d' };
-      default: return { backgroundColor: '#333', color: '#ccc' };
+    switch (tag) {
+      case 'Closest': return { backgroundColor: '#E8F5E9', color: '#34C759' }; // Apple Green
+      case 'Cheapest': return { backgroundColor: '#E3F2FD', color: '#007AFF' }; // Apple Blue
+      case 'Best Value': return { backgroundColor: '#FFF8E1', color: '#FF9500' }; // Apple Orange
+      default: return { backgroundColor: '#F2F2F7', color: '#8E8E93' }; // System Gray
     }
   };
 
   // Convert distance to KM if it's large, otherwise keep meters
-  const formattedDistance = item.distance > 1000 
-    ? `${(item.distance / 1000).toFixed(1)} km` 
+  const formattedDistance = item.distance > 1000
+    ? `${(item.distance / 1000).toFixed(1)} km`
     : `${Math.round(item.distance)} m`;
 
   return (
@@ -35,7 +35,7 @@ export default function DishCard({ item }: { item: any }) {
       {/* BOTTOM ROW: Price & Tags */}
       <View style={[styles.row, { marginTop: 12 }]}>
         <Text style={styles.price}>₹{item.price}</Text>
-        
+
         <View style={styles.tagsContainer}>
           {item.tags?.map((tag: string, index: number) => {
             const colors = getTagStyle(tag);
@@ -53,18 +53,10 @@ export default function DishCard({ item }: { item: any }) {
 
 const styles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: '#1E1E1E',
-    borderRadius: 16,
-    padding: 16,
-    marginBottom: 16,
-    borderWidth: 1,
-    borderColor: '#333',
-    // Slight shadow for depth
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
+    backgroundColor: '#000000ff', // Pure white background
+    paddingVertical: 16,
+    borderBottomWidth: StyleSheet.hairlineWidth, // Ultra-thin iOS border divider
+    borderBottomColor: '#E5E5EA', // Apple System Gray 5
   },
   row: {
     flexDirection: 'row',
@@ -72,50 +64,48 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ratingBadge: {
-    backgroundColor: '#2A2A2A',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   ratingText: {
-    color: '#FFD700',
-    fontWeight: 'bold',
-    fontSize: 12,
+    color: '#FF9500',
+    fontWeight: '600',
+    fontSize: 67,
   },
   distanceText: {
-    color: '#888',
-    fontSize: 12,
-    fontWeight: '600',
+    color: '#8E8E93',
+    fontSize: 13,
+    fontWeight: '400',
   },
   dishName: {
-    fontSize: 22,
-    fontWeight: '800',
-    color: '#FFFFFF',
-    marginTop: 8,
-    letterSpacing: 0.5,
-  },
-  restaurantName: {
-    fontSize: 14,
-    color: '#B0B0B0',
-    marginTop: 4,
-  },
-  price: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#FF5A5F', // Ember Orange
+    color: '#000000',
+    marginTop: 6,
+    letterSpacing: -0.5,
+  },
+  restaurantName: {
+    fontSize: 15,
+    color: '#8E8E93',
+    marginTop: 2,
+  },
+  price: {
+    fontSize: 17,
+    fontWeight: '600',
+    color: '#007AFF',
   },
   tagsContainer: {
     flexDirection: 'row',
     gap: 6,
   },
   tagBadge: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 8,
     paddingVertical: 4,
-    borderRadius: 12,
+    borderRadius: 6,
   },
   tagText: {
     fontSize: 11,
-    fontWeight: '700',
+    fontWeight: '600',
     textTransform: 'uppercase',
   }
 });

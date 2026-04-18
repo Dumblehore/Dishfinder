@@ -19,11 +19,11 @@ export const Colors = {
   },
   dark: {
     text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    background: '#0b1a21', // New CraveMap Brand Background
+    tint: '#267cb5',       // New CraveMap Brand Blue
+    icon: '#267cb5',
+    tabIconDefault: '#5f6b7c',
+    tabIconSelected: '#267cb5',
   },
 };
 

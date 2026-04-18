@@ -47,7 +47,7 @@ export default function AddressModal({
       try {
         const url = `https://nominatim.openstreetmap.org/search?format=json&limit=8&countrycodes=in&q=${encodeURIComponent(searchArea)}`;
         const res = await fetch(url, {
-          headers: { 'User-Agent': 'DishFinderApp/1.0 (Mobile Search Focus)' }
+          headers: { 'User-Agent': 'CraveMapApp/1.0 (Mobile Search Focus)' }
         });
         const data = await res.json();
         const mapped = data.map((d: any) => ({
@@ -164,7 +164,7 @@ export default function AddressModal({
                       >
                         <Text style={styles.iconBox}>{getLabelIcon(addr.label)}</Text>
                         <View style={styles.addressInfo}>
-                          <Text style={[styles.addressName, isActive && { color: '#FF5A5F' }]}>
+                          <Text style={[styles.addressName, isActive && { color: '#267cb5' }]}>
                             {addr.label}
                           </Text>
                           <Text style={styles.addressSub}>{addr.name}</Text>
@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   checkmark: {
-    color: '#FF5A5F',
+    color: '#267cb5',
     fontSize: 18,
     fontWeight: '800',
   },
@@ -340,7 +340,7 @@ const styles = StyleSheet.create({
   },
   addBtn: {
     borderWidth: 1,
-    borderColor: '#FF5A5F',
+    borderColor: '#267cb5',
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: 'center',
@@ -348,7 +348,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   addBtnText: {
-    color: '#FF5A5F',
+    color: '#267cb5',
     fontSize: 15,
     fontWeight: '700',
   },

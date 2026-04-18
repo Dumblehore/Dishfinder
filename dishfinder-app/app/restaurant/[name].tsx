@@ -45,7 +45,7 @@ export default function RestaurantDetailScreen() {
   };
 
   const shareRestaurant = () => {
-    Share.share({ message: `Check out ${name} on DishFinder!` });
+    Share.share({ message: `Check out ${name} on CraveMap!` });
   };
 
   const ListHeader = () => (
@@ -75,7 +75,7 @@ export default function RestaurantDetailScreen() {
     <View style={styles.container}>
       {loading ? (
         <View style={styles.loaderContainer}>
-          <ActivityIndicator size="large" color="#adc7ff" />
+          <ActivityIndicator size="large" color="#267cb5" />
           <Text style={styles.loadingText}>Fetching menu...</Text>
         </View>
       ) : (
@@ -98,7 +98,7 @@ export default function RestaurantDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#121416' },
+  container: { flex: 1, backgroundColor: '#0b1a21' },
   loaderContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   loadingText: { color: '#c1c6d7', marginTop: 12, fontSize: 16, fontWeight: '600' },
   listContent: { padding: 20, paddingTop: 60, paddingBottom: 100 },
@@ -106,15 +106,15 @@ const styles = StyleSheet.create({
   navRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 },
   navRowRight: { flexDirection: 'row', gap: 12 },
   circleBtn: {
-    width: 44, height: 44, borderRadius: 22, backgroundColor: '#1a2a4a',
-    alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: '#adc7ff',
+    width: 44, height: 44, borderRadius: 22, backgroundColor: '#162d3a',
+    alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: '#267cb5',
   },
-  circleBtnIcon: { fontSize: 20, color: '#adc7ff', fontWeight: 'bold' },
+  circleBtnIcon: { fontSize: 20, color: '#267cb5', fontWeight: 'bold' },
   headerTitleBox: { marginBottom: 32 },
   title: { fontSize: 36, fontWeight: '900', color: '#fff', letterSpacing: -1, marginBottom: 16 },
-  primaryAction: { backgroundColor: '#adc7ff', borderRadius: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 14, gap: 8 },
+  primaryAction: { backgroundColor: '#267cb5', borderRadius: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 14, gap: 8 },
   primaryActionIcon: { fontSize: 18 },
-  primaryActionText: { color: '#002e68', fontSize: 16, fontWeight: '800' },
+  primaryActionText: { color: '#fff', fontSize: 16, fontWeight: '800' },
   sectionTitle: { fontSize: 20, color: '#e2e2e5', fontWeight: '800', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 },
   emptyContainer: { padding: 20, alignItems: 'center', justifyContent: 'center', marginTop: 40 },
   emptyText: { color: '#c1c6d7', fontSize: 16 },

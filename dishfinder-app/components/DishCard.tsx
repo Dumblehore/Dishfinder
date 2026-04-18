@@ -26,11 +26,11 @@ const getBottomTint = (dishName: string): string => {
 
 const getTagStyle = (tag: string) => {
   switch (tag) {
-    case 'Closest':    return { bg: 'rgba(41,68,127,0.5)',  color: '#adc7ff', emoji: '📍' };
-    case 'Cheapest':   return { bg: 'rgba(41,68,127,0.5)',  color: '#adc7ff', emoji: '💰' };
-    case 'Best Value': return { bg: 'rgba(127,88,41,0.5)',  color: '#ffb695', emoji: '⭐' };
-    case 'Rare Dish':  return { bg: 'rgba(100,41,127,0.5)', color: '#d4a5ff', emoji: '💎' };
-    default:           return { bg: 'rgba(60,65,80,0.5)',   color: '#c1c6d7', emoji: '' };
+    case 'Closest':    return { bg: 'rgba(38,124,181,0.2)',  color: '#267cb5', emoji: '📍' };
+    case 'Cheapest':   return { bg: 'rgba(38,124,181,0.2)',  color: '#267cb5', emoji: '💰' };
+    case 'Best Value': return { bg: 'rgba(127,88,41,0.3)',  color: '#ffb695', emoji: '⭐' };
+    case 'Rare Dish':  return { bg: 'rgba(100,41,127,0.3)', color: '#d4a5ff', emoji: '💎' };
+    default:           return { bg: 'rgba(60,65,80,0.3)',   color: '#c1c6d7', emoji: '' };
   }
 };
 
@@ -68,7 +68,7 @@ export default function DishCard({ item, activeFilter = 'all' }: { item: any, ac
   // ── Share this dish ───────────────────────────────────────────────────────
   const shareDish = () => {
     Share.share({
-      message: `🍽️ ${item.dish_name} at ${item.restaurant_name} for ₹${item.price} — found on DishFinder!`,
+      message: `🍽️ ${item.dish_name} at ${item.restaurant_name} for ₹${item.price} — found on CraveMap!`,
     });
   };
 
@@ -164,11 +164,11 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginBottom: 28,
     overflow: 'hidden',
-    backgroundColor: '#1e2022',
+    backgroundColor: '#0f242d', // Slightly lighter than main bg for card lift
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.4,
-    shadowRadius: 20,
+    shadowOpacity: 0.5,
+    shadowRadius: 24,
     elevation: 12,
   },
   imageArea: {
@@ -187,9 +187,9 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     gap: 4,
     borderWidth: 1,
-    borderColor: 'rgba(173,199,255,0.3)',
+    borderColor: 'rgba(38,124,181,0.3)',
   },
-  ratingStar:  { color: '#adc7ff', fontSize: 14, fontWeight: '700' },
+  ratingStar:  { color: '#267cb5', fontSize: 14, fontWeight: '700' },
   ratingValue: { color: '#e2e2e5', fontSize: 13, fontWeight: '700' },
   imageOverlay: { justifyContent: 'flex-end' },
   dishNameLarge: {
@@ -205,18 +205,18 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   restaurantName: { fontSize: 14, color: '#c1c6d7', fontWeight: '500', flex: 1, marginRight: 8 },
   distancePill: {
-    backgroundColor: 'rgba(173,199,255,0.12)',
+    backgroundColor: 'rgba(38,124,181,0.1)',
     borderRadius: 20,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderWidth: 1,
-    borderColor: 'rgba(173,199,255,0.25)',
+    borderColor: 'rgba(38,124,181,0.2)',
   },
-  distanceText: { color: '#adc7ff', fontSize: 12, fontWeight: '700' },
+  distanceText: { color: '#267cb5', fontSize: 12, fontWeight: '700' },
   tagsRow:  { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 10 },
   tagPill:  { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20 },
   tagText:  { fontSize: 11, fontWeight: '700' },
-  price:    { fontSize: 24, fontWeight: '800', color: '#adc7ff', letterSpacing: -0.5 },
+  price:    { fontSize: 24, fontWeight: '800', color: '#267cb5', letterSpacing: -0.5 },
   ctaRow:   { flexDirection: 'row', alignItems: 'center', gap: 8 },
   iconBtn: {
     width: 40,
@@ -232,10 +232,10 @@ const styles = StyleSheet.create({
   heartBtnActive: { backgroundColor: 'rgba(255, 82, 82, 0.2)', borderColor: '#ff5252' },
   heartIconActive:{ color: '#ff5252' },
   ctaBtn: {
-    backgroundColor: '#adc7ff',
+    backgroundColor: '#267cb5',
     borderRadius: 20,
     paddingHorizontal: 18,
     paddingVertical: 10,
   },
-  ctaBtnText: { color: '#002e68', fontSize: 12, fontWeight: '800', letterSpacing: 0.5 },
+  ctaBtnText: { color: '#fff', fontSize: 12, fontWeight: '800', letterSpacing: 0.5 },
 });

@@ -3,6 +3,7 @@ const fs      = require('fs');
 const path    = require('path');
 const mongoose = require('mongoose');
 const Dish    = require('../models/Dish');
+const { loadDishMenuCsv } = require('./loadDishMenuCsv');
 
 // ── CSV parser (no external dep) ─────────────────────────────────────────────
 function parseCSV(text) {
@@ -153,6 +154,31 @@ async function main() {
       });
     }
   }
+
+  // ── Dish-level menu CSV (e.g. Pahadi House) not in the Zomato restaurant CSV ─
+  const menuCsvDishes = loadDishMenuCsv('pahadi_house_dishes.csv');
+  let menuCsvAdded = 0;
+  for (const d of menuCsvDishes) {
+    if (d.latitude == null || d.longitude == null) {
+      console.warn(`⚠️  Skipping "${d.dish_name}": missing latitude/longitude in menu CSV`);
+      continue;
+    }
+    dishes.push({
+      dish_name: d.dish_name,
+      normalized_name: d.dish_name.toLowerCase(),
+      synonyms: d.synonyms,
+      restaurant_name: d.restaurant_name,
+      price: d.price,
+      rating: d.rating != null ? d.rating : 4.5,
+      is_rare: Boolean(d.is_rare),
+      location: {
+        type: 'Point',
+        coordinates: [d.longitude, d.latitude],
+      },
+    });
+    menuCsvAdded++;
+  }
+  if (menuCsvAdded) console.log(`🏔️  Added ${menuCsvAdded} dishes from pahadi_house_dishes.csv.\n`);
 
   console.log(`🍽️  Built ${dishes.length} dish records for Dehradun (skipped ${skippedRestaurants} empty/invalid rows).\n`);
   console.log('⏳ Inserting into MongoDB (duplicates will be skipped silently)...\n');

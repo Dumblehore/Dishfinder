@@ -34,7 +34,7 @@ const seedKaggleData = async () => {
                         mapHeaders: ({ header }) => {
                             const h = header.trim();
                             const hl = h.toLowerCase();
-                            if (h === 'Restaurant_Name' || hl === 'restaurant name' || hl === 'name') return 'name';
+                            if (h === 'Restaurant_Name' || hl === 'restaurant name' || hl === 'restaurant_name' || hl === 'name') return 'name';
                             if (h === 'Category' || hl === 'cuisines') return 'cuisines';
                             if (h === 'Pricing_for_2' || hl === 'average cost for two' || hl === 'average_cost_for_two') return 'average_cost_for_two';
                             if (h === 'Dining_Rating' || hl === 'aggregate rating' || hl === 'aggregate_rating') return 'aggregate_rating';
@@ -47,6 +47,38 @@ const seedKaggleData = async () => {
                     .on('data', (row) => {
                         // Skip rows with bad GPS coordinates
                         if (!row.latitude || !row.longitude || row.latitude === '0.0' || row.longitude === '0.0') return;
+
+                        // ── DIRECT INJECTION PATH FOR PRE-FORMATTED CSVs ──
+                        // If the CSV is already broken down into literal dishes (like Pahadi House),
+                        // bypass all generational algorithms and inject the pure unadulterated payload.
+                        if (row.dish_name && row.price) {
+                            const uniqueKey = `${row.name.trim()}-${row.dish_name.trim()}`;
+                            if (addedDishes.has(uniqueKey)) return; 
+                            addedDishes.add(uniqueKey);
+
+                            const baseSynonyms = row.synonyms ? row.synonyms.split('|') : ['food', row.dish_name.split(' ')[0].toLowerCase()];
+                            if (row.category) {
+                                // Rip the category apart (e.g., "Pan - Asian Plates") and push each word into the search index
+                                const catWords = row.category.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length > 2);
+                                baseSynonyms.push(...catWords);
+                            }
+
+                            dishesToInsert.push({
+                                dish_name: row.dish_name.trim(),
+                                normalized_name: row.dish_name.trim().toLowerCase(),
+                                synonyms: [...new Set(baseSynonyms)],
+                                restaurant_name: row.name.trim(),
+                                price: parseInt(row.price) || 200,
+                                rating: parseFloat(row.rating) || 4.5,
+                                is_rare: row.is_rare === 'true',
+                                location: {
+                                    type: 'Point',
+                                    coordinates: [parseFloat(row.longitude), parseFloat(row.latitude)] 
+                                }
+                            });
+                            return; // Halt logic and move to next row
+                        }
+                        // ──────────────────────────────────────────────────
 
                         // Geofencing: If country code exists, strictly ensure it's computationally mapped to India (1)
                         if (row.country_code && row.country_code !== '1') return;

@@ -1,0 +1,225 @@
+restaurant_name,dish_name,price,is_rare,synonyms,latitude,longitude,rating
+The pahadi house,Handi Chicken 6pcs,180,false,handi|chicken|curry|gravy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Handi Chicken 12pcs,340,false,handi|chicken|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Handi Chicken 24pcs,600,false,handi|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Handi Mutton 6pcs,250,false,handi|mutton|lamb|gravy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Handi Mutton 12pcs,480,false,handi|mutton,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Handi Mutton 24pcs,950,true,handi|mutton,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Biryani,150,false,biryani|paneer|rice,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Spcl. Veg Biryani,135,false,biryani|veg|special|rice,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Pulaw,120,false,pulao|pulaw|veg|rice,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Pulaw,130,false,pulao|pulaw|paneer,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Biryani,180,false,biryani|chicken|rice,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Egg Biryani,150,false,biryani|egg|rice,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Dal Kichdi,80,false,khichdi|dal|rice|comfort,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Jeera Rice,110,false,jeera|rice|cumin,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Plain Rice,80,false,plain rice|rice|steamed rice,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Combo,170,false,combo|butter chicken|naan|parantha,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Combo,140,false,combo|kadhai paneer|parantha,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Egg Combo,130,false,combo|egg bhurji|egg curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Dal Combo,140,false,combo|dal makhani|dal tadka,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Corn Combo,140,false,combo|corn masala,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chap Combo,140,false,combo|masala soya chap|kadhai chap,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Tawa Roti,10,false,roti|chapati|tawa,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Butter Roti,12,false,roti|butter,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Garlic Naan,40,false,naan|garlic,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Turbo Naan,50,false,naan|turbo|garlic,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Butter Naan,30,false,naan|butter,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Lacha Parantha,30,false,parantha|lacha,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Rumali Roti,25,false,roti|rumali,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Special Pahadi Thali,160,true,thali|pahadi|local|meal,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Special Thali,160,false,thali|veg|meal,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Thali,120,false,thali|paneer|meal,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Thali,160,false,thali|chicken|meal,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer / Egg Rice Bowl,120,false,bowl|rice|paneer|egg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Rice Bowl,150,false,bowl|rice|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Burger,70,false,burger|veg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Burger,90,false,burger|paneer,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Burger,110,false,burger|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Grilled Sandwich,120,false,sandwich|cheese|grilled,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Grilled Sandwich,90,false,sandwich|veg|grilled,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Egg Sandwich,120,false,sandwich|egg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Sandwich,140,false,sandwich|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Bun Makhan,25,true,bun|butter|makhan|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,French Fries,90,false,fries|potato,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Fries,110,false,fries|masala|spicy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Peri-Peri Fries,120,false,fries|peri peri|spicy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Honey Chilli Potato,125,false,potato|honey|chilli|crispy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Vadapav,45,false,vada pav|cheese|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Vadapav,40,false,vada pav|paneer,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Vada Pav,30,false,vada pav|snack|mumbai,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mix Pakora,110,false,pakora|fritters|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Pakora,150,false,pakora|chicken|fried,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Kulhad Tea (S/M),20,true,tea|chai|kulhad,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Hot Chocolate,70,false,chocolate|hot|cocoa,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Brownie Shake,90,false,shake|brownie|chocolate,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Oreo Shake,80,false,shake|oreo|chocolate,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cold Coffee,70,false,coffee|cold|frappe,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Green Apple Mojito,70,false,mojito|mocktail|green apple,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Lemon Soda,60,false,soda|lemon|drink,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Pahadon Ki Maggie,65,true,maggi|noodles|pahadi|special,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Overloaded Pizza,220,true,pizza|chicken|cheese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Cheesy Pizza,199,false,pizza|veg|cheese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,White Sauce Pasta,170,false,pasta|white sauce|creamy|alfredo,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Devil Gravy Momo,120,true,momo|spicy|devil|gravy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Hakka Noodles,130,false,noodles|hakka|chowmein,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Pahadi Kheer,125,true,kheer|dessert|sweet|pahadi,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Pahadi Special Bal Mithai,99,true,mithai|sweet|dessert|local,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Kashmiri Pulaw,110,true,pulao|pulaw|kashmiri|rice|sweet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Pineapple Raita,150,false,raita|pineapple|yogurt,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Kaju Masala,420,true,kaju|cashew|curry|rich,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Milli Juli Sabji,220,false,mix veg|sabji|vegetables,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Murg Pahadi Curry,379,true,chicken|pahadi|curry|local,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Patiala,399,true,chicken|patiala|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Peshawari Parantha,120,true,parantha|peshawari|sweet|dry fruits,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Pizza Parantha,100,false,parantha|pizza|fusion,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Kathi Roll,100,false,roll|kathi roll|chicken|wrap,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Egg Kathi Roll,90,false,roll|kathi roll|egg|wrap,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Manchow Soup,80,false,soup|manchow|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Sweet Corn Soup,80,false,soup|corn|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chana Chat,80,false,chat|chana|spicy|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Delux Thali,220,true,thali|deluxe|special|large meal,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mushroom Rice Bowl,140,false,bowl|rice|mushroom,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mix Grill Platter,399,true,platter|grill|kebab|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Smoky Chicken,349,false,chicken|smoky|tandoor,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Special Pahadi Kebab,249,true,kebab|pahadi|special|local,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Amritsari Fish Tikka,339,true,fish|tikka|amritsari|seafood,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Pahadi Mutton Boti Kebab,259,true,mutton|kebab|boti|pahadi,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Tandoori Bharwa Aaloo,139,true,aloo|potato|stuffed|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Tandoori Cheesy Mushroom,189,true,mushroom|cheese|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Crispy Corn,189,false,corn|crispy|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Non-veg Spring Rolls,210,false,spring roll|chicken|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chocolate Cookies,59,false,cookies|chocolate|dessert,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Banana/Lemon Bread Loaf (2 Pcs),59,false,banana bread|lemon bread|loaf|dessert,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Red Velvet Cup Cake,59,false,cup cake|red velvet|dessert,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Rasgulla,59,false,rasgulla|sweet|dessert,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Ice-cream (Choice),50,false,ice cream|dessert,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Sweet Lassi,79,false,lassi|sweet|drink,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mango Lassi,89,false,lassi|mango|drink,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Chaas,79,false,chaas|buttermilk|drink,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Devil Gravy Chicken Momo,150,false,momo|chicken|devil|gravy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Kurkure Momo,150,false,momo|cheese|kurkure|fried,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Steamed Momo,90,false,momo|paneer|steamed,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Fried Momo,100,false,momo|paneer|fried,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Steamed Momo,100,false,momo|chicken|steamed,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Fried Momo,110,false,momo|chicken|fried,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Steamed Momo,80,false,momo|veg|steamed,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Singaporean Noodles,130,false,noodles|singaporean,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Oriental Noodles,130,false,noodles|oriental,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Shanghai Noodles,130,false,noodles|shanghai,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chilli Garlic Noodles,110,false,noodles|chilli|garlic,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Noodles,170,false,noodles|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Afghani Malai Chap,150,true,chap|afghani|malai,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Achari Chap,150,false,chap|achari,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Chap,150,false,chap|masala,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Tikka,250,false,paneer|tikka,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mushroom Tikka,250,false,mushroom|tikka,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Tikka,450,true,chicken|tikka,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Tandoori Chicken Full,450,true,chicken|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Shezwan Chicken Fried Rice,190,false,fried rice|schezwan|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Fried Rice,150,false,fried rice|paneer,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Fried Rice,130,false,fried rice|veg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Fried Rice,170,false,fried rice|chicken,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Egg Fried Rice,150,false,fried rice|egg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Garlic Fried Rice,140,false,fried rice|garlic,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chilly Chicken,350,false,chicken|chilly|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,KFC Chicken,335,false,chicken|kfc|fried,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Manchurian,270,false,chicken|manchurian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken 65,350,false,chicken|65|spicy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Lolipop,335,false,chicken|lolipop|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Sweet & Sour Chicken Wings,270,false,chicken wings|sweet|sour,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chilli Paneer,295,false,paneer|chilli|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chilli Mushroom,295,false,mushroom|chilli|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Manchurian,130,false,veg|manchurian|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Soya Chilli,130,false,soya|chilli|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Tandoori Momo,160,false,momo|paneer|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Afghani Momo,160,false,momo|paneer|afghani,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Tandoori Momo,200,true,momo|cheese|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Afghani Momo,200,true,momo|cheese|afghani,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Achari Momo,200,true,momo|cheese|achari,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Tandoori Momo,225,true,momo|chicken|tandoori,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Afghani Momo,225,true,momo|chicken|afghani,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Achari Momo,225,true,momo|chicken|achari,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chilli Chap,125,false,chap|chilli|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Garlic Chap,125,false,chap|garlic,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Tikka Afghani,250,true,paneer|tikka|afghani,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Tikka Achari,250,false,paneer|tikka|achari,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Sabzi Takatin,100,true,veg balls|fried|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Corn Cheese Balls,150,false,corn|cheese|balls|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Fruit Chat,100,false,chat|fruit,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Aloo Chat,80,false,chat|aloo|potato,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Hot Kulhad Coffee,40,true,coffee|hot|kulhad,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Kulhad Milk,50,false,milk|kulhad|hot,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Ginger Elaichi Masala Tea,30,false,tea|ginger|elaichi|masala,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Litchi Mojito,90,false,mojito|litchi|drink,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Blood Orange Mojito,90,false,mojito|blood orange|drink,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Lemon Mint Ice Tea,90,false,ice tea|lemon|mint,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Honey Chilli Cauliflower,140,false,cauliflower|honey|chilli|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mac & Cheese,150,false,pasta|mac and cheese|creamy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Macroni,130,false,pasta|macaroni|masala,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Red Sauce Pasta,120,false,pasta|red sauce|arrabiata,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Spaghetti,190,false,pasta|spaghetti,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Spinach Pasta,120,false,pasta|spinach|healthy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Cheese Macroni,130,false,pasta|macaroni|cheese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Onion & Capsicum Pizza,160,false,pizza|onion|capsicum,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Sweet Corn Pizza,160,false,pizza|sweet corn,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Fish Pakora,199,true,pakora|fish|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Sprout Salad,115,false,salad|sprout|healthy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Fruit Salad,115,false,salad|fruit|healthy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Garden Green Salad,95,false,salad|green|healthy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Salad,195,false,salad|chicken|healthy,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mix Raita,120,false,raita|mix|yogurt,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Boondi Raita,110,false,raita|boondi|yogurt,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Alo Pyaz Raita,110,false,raita|aloo|pyaz|yogurt,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Dal Tadka,190,false,dal|tadka|fry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Kadi Pakora,190,false,kadi|pakora|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Corn Masala Curry,250,false,corn|masala|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Gobi Aloo,220,false,gobi|aloo|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Bhindi Masala,220,false,bhindi|masala|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Dum Aloo Punjabi,200,false,dum aloo|punjabi|potato,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Saagwala,480,true,chicken|saag|spinach,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Kali Mirch,490,true,chicken|kali mirch|pepper,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Palak Paneer,199,false,paneer|palak|spinach,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Matar Paneer,199,false,paneer|matar|peas,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mutton Pak Curry,429,true,mutton|pak|curry,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mushroom Cheese Parantha,100,false,parantha|mushroom|cheese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Corn Cheese Parantha,100,false,parantha|corn|cheese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mix Veg Parantha,70,false,parantha|mix veg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Parantha,70,false,parantha|paneer,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Aloo Pyaz Parantha,50,false,parantha|aloo|pyaz,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Gobi Parantha,60,false,parantha|gobi,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mooli Parantha,60,false,parantha|mooli,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Egg Parantha,90,false,parantha|egg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Keema Parantha,100,true,parantha|chicken|keema,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chole Bhature,90,false,chole|bhature|breakfast,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Poori Bhaji,90,false,poori|bhaji|breakfast,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chole Kulche,90,false,chole|kulche|breakfast,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Poha,90,false,poha|masala|breakfast,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Vermicelli,120,false,vermicelli|masala|breakfast,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Kathi Roll,90,false,roll|kathi roll|paneer,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Kathi Roll,70,false,roll|kathi roll|veg,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Aloo Kathi Roll,70,false,roll|kathi roll|aloo,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Lung Fung Soup,80,true,soup|lung fung|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Chicken Soup,120,false,soup|chicken|chinese,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Papad,60,false,papad|masala|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Peanut,120,false,peanut|masala|snack,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Grilled Paneer,300,false,paneer|grilled|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Grilled Mushroom,300,false,mushroom|grilled|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Steamed Vegetables,90,false,vegetables|steamed|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Besan Chilla,90,false,chilla|besan|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Soya Chunks,90,false,soya|chunks|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Gym Paneer Bowl,90,false,bowl|paneer|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Gym Chicken,110,false,chicken|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Steamed Chicken,110,false,chicken|steamed|gym diet,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Paneer Thupka,100,false,thukpa|paneer|soup,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Vegetable Thupka,90,false,thukpa|veg|soup,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mushroom Corn Thupka,90,false,thukpa|mushroom|corn|soup,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Badam Milk,59,false,milk|badam|warm,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Spring R. Masala Dosa,165,true,dosa|spring|masala|south indian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Mysore Masala Dosa,120,false,dosa|mysore|masala|south indian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Masala Dosa,110,false,dosa|masala|south indian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Rawa Dosa,110,false,dosa|rawa|south indian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Plain Dosa,90,false,dosa|plain|south indian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Onion Uttapam,85,false,uttapam|onion|south indian,30.398750860459817,78.07834729445716,4.8
+The pahadi house,French Toast,79,false,french toast|egg|breakfast,30.398750860459817,78.07834729445716,4.8
+The pahadi house,Veg Combo,160,false,combo|mix veg|roti,30.398750860459817,78.07834729445716,4.8

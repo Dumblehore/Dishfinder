@@ -6,7 +6,7 @@ const Dish = require('../models/Dish');
 dotenv.config({ path: __dirname + '/../../.env' });
 
 const RESTAURANT_LOCATIONS = require('../data/custom_restaurants');
-const pahadiHouseDishes = require('../data/pahadi_house');
+const { loadDishMenuCsv } = require('./loadDishMenuCsv');
 
 // 🍔 ADD DISHES EXTREMELY QUICKLY HERE
 // Just type the dish, and type the matching exact restaurant name!
@@ -21,8 +21,8 @@ const dehradunDishes = [
     }
 ];
 
-// Combine your typed array with the AI generated arrays!
-const allCustomDishes = [...dehradunDishes, ...pahadiHouseDishes];
+// Combine typed dishes + dish-level menu CSV (see src/data/pahadi_house_dishes.csv)
+const allCustomDishes = [...dehradunDishes, ...loadDishMenuCsv('pahadi_house_dishes.csv')];
 
 const seedDehradun = async () => {
     try {
@@ -31,12 +31,22 @@ const seedDehradun = async () => {
 
         // Convert the flat easy-to-read data to the massive GeoJSON requirement for MongoDB
         const geoJsonDishes = allCustomDishes.map(dish => {
-            // Find the location data intelligently
-            const locationData = RESTAURANT_LOCATIONS[dish.restaurant_name];
-            
-            if (!locationData) {
-                console.error(`❌ ERROR: You forgot to add "${dish.restaurant_name}" to your custom_restaurants.js file!`);
-                process.exit(1);
+            let latitude;
+            let longitude;
+            let rating;
+            if (dish.latitude != null && dish.longitude != null) {
+                latitude = dish.latitude;
+                longitude = dish.longitude;
+                rating = dish.rating != null ? dish.rating : 4.5;
+            } else {
+                const locationData = RESTAURANT_LOCATIONS[dish.restaurant_name];
+                if (!locationData) {
+                    console.error(`❌ ERROR: Add "${dish.restaurant_name}" to custom_restaurants.js or put lat/lng on the CSV row.`);
+                    process.exit(1);
+                }
+                latitude = locationData.latitude;
+                longitude = locationData.longitude;
+                rating = locationData.rating;
             }
 
             return {
@@ -45,12 +55,12 @@ const seedDehradun = async () => {
                 synonyms: dish.synonyms,
                 restaurant_name: dish.restaurant_name,
                 price: dish.price,
-                rating: locationData.rating,
+                rating,
                 is_rare: dish.is_rare,
                 location: {
                     type: 'Point',
-                    coordinates: [locationData.longitude, locationData.latitude] // Note: GeoJSON is [lng, lat]
-                }
+                    coordinates: [longitude, latitude],
+                },
             };
         });
 

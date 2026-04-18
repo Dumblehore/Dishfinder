@@ -8,6 +8,7 @@
     "dev": "nodemon src/app.js",
     "seed": "node src/scripts/seed.js",
     "seed:doon": "node src/scripts/dehradun_seed.js",
+    "import:dehradun": "node src/scripts/import_dehradun.js",
     "seed:kaggle": "node src/scripts/import_kaggle.js"
   },
   "keywords": [],

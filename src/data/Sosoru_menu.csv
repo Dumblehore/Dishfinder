@@ -1,298 +1,298 @@
 restaurant_name,dish_name,price,category,is_rare,synonyms,latitude,longitude,rating
-Sosoru,Chicken and Tofu Kimchi Stew,699,Pan - Asian Plates,false,kimchi|stew|chicken|tofu,28.5244,77.1855,4.5
-Sosoru,Nasi Goreng,899,Pan - Asian Plates,false,nasi|goreng|seafood|fried rice,28.5244,77.1855,4.5
-Sosoru,Khao Suey (Veg),499,Pan - Asian Plates,false,khao|suey|noodle|thai|curry,28.5244,77.1855,4.5
-Sosoru,Khao Suey (Chicken),599,Pan - Asian Plates,false,khao|suey|noodle|thai|curry,28.5244,77.1855,4.5
-Sosoru,Bulgogi (Chicken),749,Pan - Asian Plates,false,bulgogi|korean|chicken,28.5244,77.1855,4.5
-Sosoru,Bulgogi (Pork),799,Pan - Asian Plates,false,bulgogi|korean|pork,28.5244,77.1855,4.5
-Sosoru,Tteok-boki,499,Pan - Asian Plates,false,tteok|boki|rice|cake,28.5244,77.1855,4.5
-Sosoru,Tteok-boki,599,Pan - Asian Plates,false,tteok|boki|rice|cake,28.5244,77.1855,4.5
-Sosoru,Tteok-boki,699,Pan - Asian Plates,false,tteok|boki|rice|cake,28.5244,77.1855,4.5
-Sosoru,Rabboki,519,Pan - Asian Plates,false,rabboki|korean|rice|noodle,28.5244,77.1855,4.5
-Sosoru,Rabboki,649,Pan - Asian Plates,false,rabboki|korean|rice|noodle,28.5244,77.1855,4.5
-Sosoru,Rabboki,719,Pan - Asian Plates,false,rabboki|korean|rice|noodle,28.5244,77.1855,4.5
-Sosoru,Katsu Curry (Tofu),599,Pan - Asian Plates,false,katsu|curry|fried,28.5244,77.1855,4.5
-Sosoru,Katsu Curry (Chicken),649,Pan - Asian Plates,false,katsu|curry|fried,28.5244,77.1855,4.5
-Sosoru,Katsu Curry (Prawn),699,Pan - Asian Plates,false,katsu|curry|fried|prawn,28.5244,77.1855,4.5
-Sosoru,Kimchi Stew (Tofu),599,Pan - Asian Plates,false,kimchi|stew|tofu,28.5244,77.1855,4.5
-Sosoru,Kimchi Stew (Chicken),699,Pan - Asian Plates,false,kimchi|stew|chicken,28.5244,77.1855,4.5
-Sosoru,Kimchi Stew (Pork),749,Pan - Asian Plates,false,kimchi|stew|pork,28.5244,77.1855,4.5
-Sosoru,Samgyeopsal Set,1199,BBQ & Hotpot,false,bbq|pork|korean,28.5244,77.1855,4.5
-Sosoru,Samgyeopsal Set (2-4 Servings),2199,BBQ & Hotpot,false,bbq|pork|korean|set,28.5244,77.1855,4.5
-Sosoru,Yangnyeom Samgyeopsal Set,1399,BBQ & Hotpot,false,bbq|pork|spicy|korean,28.5244,77.1855,4.5
-Sosoru,Yangnyeom Samgyeopsal Set (2-4 Servings),2399,BBQ & Hotpot,false,bbq|pork|spicy|korean|set,28.5244,77.1855,4.5
-Sosoru,Dak Gui Set,999,BBQ & Hotpot,false,bbq|chicken|korean,28.5244,77.1855,4.5
-Sosoru,Dak Gui Set (2-4 Servings),1699,BBQ & Hotpot,false,bbq|chicken|korean|set,28.5244,77.1855,4.5
-Sosoru,Yangnyeom Dak Gui Set,1199,BBQ & Hotpot,false,bbq|chicken|spicy|korean,28.5244,77.1855,4.5
-Sosoru,Yangnyeom Dak Gui Set (2-4 Servings),1899,BBQ & Hotpot,false,bbq|chicken|spicy|korean|set,28.5244,77.1855,4.5
-Sosoru,Dubu / Dak Kimchi Jjigae,1999,Jeongol / Korean Hotpot,false,hotpot|kimchi|tofu|chicken,28.5244,77.1855,4.5
-Sosoru,Dubu / Dak Kimchi Jjigae (2-4 Servings),2099,Jeongol / Korean Hotpot,false,hotpot|kimchi|tofu|chicken|set,28.5244,77.1855,4.5
-Sosoru,Budae - Jjigae,2499,Jeongol / Korean Hotpot,false,hotpot|stew|korean|noodle,28.5244,77.1855,4.5
-Sosoru,Mandu Jeongol,2499,Jeongol / Korean Hotpot,false,hotpot|dumpling|korean,28.5244,77.1855,4.5
-Sosoru,Haemul Jeongol,3499,Jeongol / Korean Hotpot,false,hotpot|seafood|korean,28.5244,77.1855,4.5
-Sosoru,Shabu Shabu,4599,Jeongol / Korean Hotpot,false,hotpot|shabu|seafood|vegetables,28.5244,77.1855,4.5
-Sosoru,Tokyo Ramen,699,Ramen & Ramyeon,false,ramen|noodle|broth|miso,28.5244,77.1855,4.5
-Sosoru,Kyushu Chicken Ramen,749,Ramen & Ramyeon,false,ramen|noodle|chicken|miso,28.5244,77.1855,4.5
-Sosoru,Tonkotsu Ramen,799,Ramen & Ramyeon,false,ramen|noodle|pork|broth,28.5244,77.1855,4.5
-Sosoru,Tempura Soba (Veg),499,Ramen & Ramyeon,false,soba|noodle|tempura|vegetable,28.5244,77.1855,4.5
-Sosoru,Tempura Soba (Chicken),599,Ramen & Ramyeon,false,soba|noodle|tempura|chicken,28.5244,77.1855,4.5
-Sosoru,Tempura Soba (Prawn),699,Ramen & Ramyeon,false,soba|noodle|tempura|prawn,28.5244,77.1855,4.5
-Sosoru,Nabeyaki Udon (Veg),499,Ramen & Ramyeon,false,udon|noodle|japanese,28.5244,77.1855,4.5
-Sosoru,Nabeyaki Udon (Chicken),599,Ramen & Ramyeon,false,udon|noodle|japanese|chicken,28.5244,77.1855,4.5
-Sosoru,Nabeyaki Udon (Prawn),699,Ramen & Ramyeon,false,udon|noodle|japanese|prawn,28.5244,77.1855,4.5
-Sosoru,Korean Spicy Ramyeon (Veg),349,Ramen & Ramyeon,false,ramyeon|noodle|spicy|korean,28.5244,77.1855,4.5
-Sosoru,Korean Spicy Ramyeon (Chicken),459,Ramen & Ramyeon,false,ramyeon|noodle|spicy|korean|chicken,28.5244,77.1855,4.5
-Sosoru,Korean Spicy Ramyeon (Pork),549,Ramen & Ramyeon,false,ramyeon|noodle|spicy|korean|pork,28.5244,77.1855,4.5
-Sosoru,Shin Ramyeon,349,Ramen & Ramyeon,false,ramyeon|noodle|instant,28.5244,77.1855,4.5
-Sosoru,Shin Ramyeon,459,Ramen & Ramyeon,false,ramyeon|noodle|instant,28.5244,77.1855,4.5
-Sosoru,Shin Ramyeon,549,Ramen & Ramyeon,false,ramyeon|noodle|instant,28.5244,77.1855,4.5
-Sosoru,Jjangmyeon,349,Ramen & Ramyeon,false,jjangmyeon|noodle|korean,28.5244,77.1855,4.5
-Sosoru,Jjangmyeon,399,Ramen & Ramyeon,false,jjangmyeon|noodle|korean,28.5244,77.1855,4.5
-Sosoru,Jjangmyeon,499,Ramen & Ramyeon,false,jjangmyeon|noodle|korean,28.5244,77.1855,4.5
-Sosoru,Katsudon,799,Donburi (Rice Bowl),false,katsu|donburi|rice|pork,28.5244,77.1855,4.5
-Sosoru,Unagi eel,1199,Donburi (Rice Bowl),false,unagi|eel|donburi|rice,28.5244,77.1855,4.5
-Sosoru,Chirashi Bowl,1299,Donburi (Rice Bowl),false,chirashi|sushi|rice|bowl,28.5244,77.1855,4.5
-Sosoru,Kimchi Bokkeumbap (Veg),499,Donburi (Rice Bowl),false,kimchi|bokkeumbap|rice|vegetable,28.5244,77.1855,4.5
-Sosoru,Kimchi Bokkeumbap (Chicken),599,Donburi (Rice Bowl),false,kimchi|bokkeumbap|rice|chicken,28.5244,77.1855,4.5
-Sosoru,Kimchi Bokkeumbap (Pork),699,Donburi (Rice Bowl),false,kimchi|bokkeumbap|rice|pork,28.5244,77.1855,4.5
-Sosoru,Bibimbap (Veg),599,Donburi (Rice Bowl),false,bibimbap|rice|vegetable,28.5244,77.1855,4.5
-Sosoru,Bibimbap (Chicken),699,Donburi (Rice Bowl),false,bibimbap|rice|chicken,28.5244,77.1855,4.5
-Sosoru,Bibimbap (Pork),799,Donburi (Rice Bowl),false,bibimbap|rice|pork,28.5244,77.1855,4.5
-Sosoru,Kung Pao (Tofu),695,Hot Sizzling Bowl,false,kung|pao|sizzling|tofu,28.5244,77.1855,4.5
-Sosoru,Kung Pao (Chicken),745,Hot Sizzling Bowl,false,kung|pao|sizzling|chicken,28.5244,77.1855,4.5
-Sosoru,Kung Pao (Prawn),795,Hot Sizzling Bowl,false,kung|pao|sizzling|prawn,28.5244,77.1855,4.5
-Sosoru,Black Bean (Tofu),695,Hot Sizzling Bowl,false,black|bean|sizzling|tofu,28.5244,77.1855,4.5
-Sosoru,Black Bean (Chicken),745,Hot Sizzling Bowl,false,black|bean|sizzling|chicken,28.5244,77.1855,4.5
-Sosoru,Black Bean (Prawn),795,Hot Sizzling Bowl,false,black|bean|sizzling|prawn,28.5244,77.1855,4.5
-Sosoru,Thai Chilli Basil (Tofu),695,Hot Sizzling Bowl,false,thai|chilli|basil|sizzling|tofu,28.5244,77.1855,4.5
-Sosoru,Thai Chilli Basil (Chicken),745,Hot Sizzling Bowl,false,thai|chilli|basil|sizzling|chicken,28.5244,77.1855,4.5
-Sosoru,Thai Chilli Basil (Prawn),795,Hot Sizzling Bowl,false,thai|chilli|basil|sizzling|prawn,28.5244,77.1855,4.5
-Sosoru,Vegan Tofu Bento,699,Bento Box,false,bento|tofu|japanese|vegetarian,28.5244,77.1855,4.5
-Sosoru,Katsu Chicken Bento,749,Bento Box,false,bento|katsu|chicken|japanese,28.5244,77.1855,4.5
-Sosoru,Pork Bento,799,Bento Box,false,bento|pork|japanese,28.5244,77.1855,4.5
-Sosoru,Prawn Bento,849,Bento Box,false,bento|prawn|japanese,28.5244,77.1855,4.5
-Sosoru,Vegetable Tempura Bento,859,Bento Box,false,bento|tempura|vegetable|japanese,28.5244,77.1855,4.5
-Sosoru,Sosoru Karaage Bento,899,Bento Box,false,bento|karaage|chicken|japanese,28.5244,77.1855,4.5
-Sosoru,Ebi Tempura Bento,999,Bento Box,false,bento|tempura|prawn|japanese,28.5244,77.1855,4.5
-Sosoru,Hakka Noodles,309,Rice & Noodles,false,noodles|hakka|stir fried,28.5244,77.1855,4.5
-Sosoru,Chilly Garlic Stir Fried Noodles,309,Rice & Noodles,false,noodles|chilly|garlic,28.5244,77.1855,4.5
-Sosoru,Schezwan Stir Fried Noodles,309,Rice & Noodles,false,noodles|schezwan,28.5244,77.1855,4.5
-Sosoru,Pad Thai Noodles,409,Rice & Noodles,false,pad|thai|noodles,28.5244,77.1855,4.5
-Sosoru,Yaki Soba,499,Rice & Noodles,false,yaki|soba|noodles,28.5244,77.1855,4.5
-Sosoru,Yaki Udon,499,Rice & Noodles,false,yaki|udon|noodles,28.5244,77.1855,4.5
-Sosoru,Japchae (Veg),349,Rice & Noodles,false,japchae|noodles|vegetable,28.5244,77.1855,4.5
-Sosoru,Japchae (Chicken),399,Rice & Noodles,false,japchae|noodles|chicken,28.5244,77.1855,4.5
-Sosoru,Japchae (Prawn),499,Rice & Noodles,false,japchae|noodles|prawn,28.5244,77.1855,4.5
-Sosoru,Steamed Rice (Short grain / Jasmine),299,Rice & Noodles,false,rice|steamed,28.5244,77.1855,4.5
-Sosoru,Burnt Garlic Rice,349,Rice & Noodles,false,rice|garlic|burnt,28.5244,77.1855,4.5
-Sosoru,Chilly Garlic Fried Rice,349,Rice & Noodles,false,rice|chilly|garlic|fried,28.5244,77.1855,4.5
-Sosoru,Crispy Chilli Rice,349,Rice & Noodles,false,rice|chilli|crispy|fried,28.5244,77.1855,4.5
-Sosoru,Kra Pao Rice,369,Rice & Noodles,false,rice|kra|pao|thai,28.5244,77.1855,4.5
-Sosoru,Exotic Veggies,459,Main Course,false,curry|vegetable|veg,28.5244,77.1855,4.5
-Sosoru,Mapo Tofu,489,Main Course,false,curry|tofu|sichuan,28.5244,77.1855,4.5
-Sosoru,Massaman Curry,459,Main Course,false,curry|massaman|thai,28.5244,77.1855,4.5
-Sosoru,Panang Curry,459,Main Course,false,curry|panang|thai,28.5244,77.1855,4.5
-Sosoru,Red Curry,459,Main Course,false,curry|red|thai,28.5244,77.1855,4.5
-Sosoru,Green Curry,459,Main Course,false,curry|green|thai,28.5244,77.1855,4.5
-Sosoru,Classic Chilly Chicken,499,Main Course,false,chicken|chilly|indo-chinese,28.5244,77.1855,4.5
-Sosoru,Shredded Chicken,519,Main Course,false,chicken|shredded|curry,28.5244,77.1855,4.5
-Sosoru,Fried Slice Lamb,599,Main Course,false,lamb|fried|curry,28.5244,77.1855,4.5
-Sosoru,Chilly Garlic Prawn,619,Main Course,false,prawn|chilly|garlic|curry,28.5244,77.1855,4.5
-Sosoru,Truffle Mushroom,349,Dimsum & Dumplings,false,dimsum|mushroom|truffle,28.5244,77.1855,4.5
-Sosoru,Szechwan Mushroom,349,Dimsum & Dumplings,false,dimsum|mushroom|szechwan,28.5244,77.1855,4.5
-Sosoru,Spinach and Corn,349,Dimsum & Dumplings,false,dimsum|spinach|corn,28.5244,77.1855,4.5
-Sosoru,Asparagus and Edamame,349,Dimsum & Dumplings,false,dimsum|asparagus|edamame,28.5244,77.1855,4.5
-Sosoru,Szechwan Chicken,399,Dimsum & Dumplings,false,dimsum|chicken|szechwan,28.5244,77.1855,4.5
-Sosoru,Chicken Coriander,399,Dimsum & Dumplings,false,dimsum|chicken|coriander,28.5244,77.1855,4.5
-Sosoru,Chicken Gyoza,399,Dimsum & Dumplings,false,dimsum|gyoza|chicken,28.5244,77.1855,4.5
-Sosoru,Veg Dimsum Platter (12 Pcs),1099,Dimsum & Dumplings,false,dimsum|platter|vegetable,28.5244,77.1855,4.5
-Sosoru,Non-Veg Dimsum Platter (12 Pcs),1299,Dimsum & Dumplings,false,dimsum|platter|non-vegetarian,28.5244,77.1855,4.5
-Sosoru,Veg Momo (Steamed),239,Momo,false,momo|vegetable|steamed,28.5244,77.1855,4.5
-Sosoru,Veg Momo (Kothey),249,Momo,false,momo|vegetable|fried,28.5244,77.1855,4.5
-Sosoru,Veg Momo (Chilly),259,Momo,false,momo|vegetable|chilly,28.5244,77.1855,4.5
-Sosoru,Chicken Momo (Steamed),269,Momo,false,momo|chicken|steamed,28.5244,77.1855,4.5
-Sosoru,Chicken Momo (Kothey),279,Momo,false,momo|chicken|fried,28.5244,77.1855,4.5
-Sosoru,Chicken Momo (Chilly),289,Momo,false,momo|chicken|chilly,28.5244,77.1855,4.5
-Sosoru,Chicken Cheese Momo (Steamed),289,Momo,false,momo|chicken|cheese|steamed,28.5244,77.1855,4.5
-Sosoru,Chicken Cheese Momo (Kothey),299,Momo,false,momo|chicken|cheese|fried,28.5244,77.1855,4.5
-Sosoru,Chicken Cheese Momo (Chilly),309,Momo,false,momo|chicken|cheese|chilly,28.5244,77.1855,4.5
-Sosoru,Veg Shabaley,299,Shabaley,false,shabaley|vegetable,28.5244,77.1855,4.5
-Sosoru,Chicken Shabaley,319,Shabaley,false,shabaley|chicken,28.5244,77.1855,4.5
-Sosoru,Yachae Gimbap,549,Gimbap,false,gimbap|vegetable|sushi rice,28.5244,77.1855,4.5
-Sosoru,Dak Gimbap,599,Gimbap,false,gimbap|chicken|sushi rice,28.5244,77.1855,4.5
-Sosoru,Dwaeji Gimbap,649,Gimbap,false,gimbap|pork|sushi rice,28.5244,77.1855,4.5
-Sosoru,Veg Sushi Platter (20 pcs),1899,Sushi Platter,false,sushi|platter|vegetable,28.5244,77.1855,4.5
-Sosoru,Non-Veg Sushi Platter (20 pcs),2999,Sushi Platter,false,sushi|platter|non-vegetarian,28.5244,77.1855,4.5
-Sosoru,Nigiri Platter (6 pcs),1299,Sushi Platter,false,nigiri|sushi|platter,28.5244,77.1855,4.5
-Sosoru,Nigiri Platter (12 pcs),2499,Sushi Platter,false,nigiri|sushi|platter,28.5244,77.1855,4.5
-Sosoru,Maguro (Tuna),799,Sashimi,false,sashimi|tuna,28.5244,77.1855,4.5
-Sosoru,Sake (Salmon),859,Sashimi,false,sashimi|salmon,28.5244,77.1855,4.5
-Sosoru,Hamachi (Yellow Tail),899,Sashimi,false,sashimi|hamachi,28.5244,77.1855,4.5
-Sosoru,Avocado Nigiri,399,Nigiri,false,nigiri|avocado,28.5244,77.1855,4.5
-Sosoru,Crab stick Nigiri,399,Nigiri,false,nigiri|crab|stick,28.5244,77.1855,4.5
-Sosoru,Maguro Nigiri (Tuna),759,Nigiri,false,nigiri|tuna,28.5244,77.1855,4.5
-Sosoru,Sake Nigiri (Salmon),799,Nigiri,false,nigiri|salmon,28.5244,77.1855,4.5
-Sosoru,Hamachi Nigiri (Yellow Tail),859,Nigiri,false,nigiri|hamachi,28.5244,77.1855,4.5
-Sosoru,Unagi Eel Nigiri,959,Nigiri,false,nigiri|unagi|eel,28.5244,77.1855,4.5
-Sosoru,Kappamaki Maki,649,Maki,false,maki|cucumber|sushi,28.5244,77.1855,4.5
-Sosoru,Tekka Maki,849,Maki,false,maki|tuna|sushi,28.5244,77.1855,4.5
-Sosoru,Sake Maki,849,Maki,false,maki|salmon|sushi,28.5244,77.1855,4.5
-Sosoru,Spicy Avocado Uramaki,699,Uramaki,false,uramaki|avocado|spicy,28.5244,77.1855,4.5
-Sosoru,Spicy Shiitake Uramaki,699,Uramaki,false,uramaki|shiitake|spicy,28.5244,77.1855,4.5
-Sosoru,Vegetable California Roll,699,Uramaki,false,uramaki|california|vegetable,28.5244,77.1855,4.5
-Sosoru,Rainbow Roll,799,Uramaki,false,uramaki|rainbow|sushi,28.5244,77.1855,4.5
-Sosoru,Spicy Tuna Uramaki,799,Uramaki,false,uramaki|tuna|spicy,28.5244,77.1855,4.5
-Sosoru,Yellow Tail Hamachi Uramaki,799,Uramaki,false,uramaki|hamachi|yellow tail,28.5244,77.1855,4.5
-Sosoru,Alaska Roll,799,Uramaki,false,uramaki|alaska|salmon,28.5244,77.1855,4.5
-Sosoru,Boston Roll,799,Uramaki,false,uramaki|boston|sushi,28.5244,77.1855,4.5
-Sosoru,Caterpillar Roll,799,Uramaki,false,uramaki|caterpillar|unagi,28.5244,77.1855,4.5
-Sosoru,Non veg California Roll,799,Uramaki,false,uramaki|california|crab,28.5244,77.1855,4.5
-Sosoru,Spicy Salmon Uramaki,899,Uramaki,false,uramaki|salmon|spicy,28.5244,77.1855,4.5
-Sosoru,Asparagus Tempura Uramaki,699,Tempura Roll,false,tempura|roll|asparagus,28.5244,77.1855,4.5
-Sosoru,Prawn Tempura Uramaki,799,Tempura Roll,false,tempura|roll|prawn,28.5244,77.1855,4.5
-Sosoru,Vegetables Dragon Roll,699,Tempura Roll,false,tempura|roll|vegetable|dragon,28.5244,77.1855,4.5
-Sosoru,Prawn Dragon Roll,799,Tempura Roll,false,tempura|roll|prawn|dragon,28.5244,77.1855,4.5
-Sosoru,Crispy Fried Calamari,599,Seafood,false,calamari|fried|seafood,28.5244,77.1855,4.5
-Sosoru,Thai Spiced Calamari,659,Seafood,false,calamari|thai|spiced|seafood,28.5244,77.1855,4.5
-Sosoru,Yangshuo Fish,659,Seafood,false,fish|yangshuo|seafood,28.5244,77.1855,4.5
-Sosoru,Chilli Garlic Prawns,689,Seafood,false,prawns|chilli|garlic|seafood,28.5244,77.1855,4.5
-Sosoru,Butter Garlic Prawns,699,Seafood,false,prawns|butter|garlic|seafood,28.5244,77.1855,4.5
-Sosoru,Ebi Tempura,699,Seafood,false,tempura|prawn|seafood,28.5244,77.1855,4.5
-Sosoru,Sosoru Special Spicy Shrimp Tempura,699,Seafood,false,tempura|shrimp|spicy|seafood,28.5244,77.1855,4.5
-Sosoru,Crispy Fried Lobster,2789,Seafood,true,lobster|fried|seafood,28.5244,77.1855,4.5
-Sosoru,Butter Garlic Lobster,2899,Seafood,true,lobster|butter|garlic|seafood,28.5244,77.1855,4.5
-Sosoru,Kimchi Jiigae,259,Soups & Salads,false,soup|kimchi|korean,28.5244,77.1855,4.5
-Sosoru,Miso Soup,259,Soups & Salads,false,soup|miso|japanese,28.5244,77.1855,4.5
-Sosoru,Hot & Sour Soup,259,Soups & Salads,false,soup|hot|sour,28.5244,77.1855,4.5
-Sosoru,Manchow Soup,259,Soups & Salads,false,soup|manchow|indo-chinese,28.5244,77.1855,4.5
-Sosoru,Talumein Soup,259,Soups & Salads,false,soup|talumein|indo-chinese,28.5244,77.1855,4.5
-Sosoru,Tom Yum,259,Soups & Salads,false,soup|tom|yum|thai,28.5244,77.1855,4.5
-Sosoru,Oi Muchim,299,Soups & Salads,false,salad|cucumber|korean,28.5244,77.1855,4.5
-Sosoru,Spinach Gomae,329,Soups & Salads,false,salad|spinach|japanese,28.5244,77.1855,4.5
-Sosoru,Som Tam Salad,379,Soups & Salads,false,salad|papaya|thai,28.5244,77.1855,4.5
-Sosoru,Avocado Edamame Lettuce Salad,399,Soups & Salads,false,salad|avocado|edamame,28.5244,77.1855,4.5
-Sosoru,Kani Salad,489,Soups & Salads,false,salad|crab|kani,28.5244,77.1855,4.5
-Sosoru,Jean / Korean Pancake,309,Appetiser,false,pancake|korean|appetiser,28.5244,77.1855,4.5
-Sosoru,Honey Chilli Potato,329,Appetiser,false,potato|honey|chilli,28.5244,77.1855,4.5
-Sosoru,Classic Chilli Mushroom Dry,329,Appetiser,false,mushroom|chilli|appetiser,28.5244,77.1855,4.5
-Sosoru,Chilly Paneer Dry,339,Appetiser,false,paneer|chilly|appetiser,28.5244,77.1855,4.5
-Sosoru,Crispy Wonton- Veg,339,Appetiser,false,wonton|crispy|vegetarian,28.5244,77.1855,4.5
-Sosoru,Vegetable Tempura,349,Appetiser,false,tempura|vegetable|appetiser,28.5244,77.1855,4.5
-Sosoru,Vegetable Kushiyaki (Salted / Sweet Sauce),349,Appetiser,false,kushiyaki|vegetable|appetiser,28.5244,77.1855,4.5
-Sosoru,Stir fried Bok Choy,359,Appetiser,false,bok|choy|appetiser,28.5244,77.1855,4.5
-Sosoru,Chilli Garlic Tofu,379,Appetiser,false,tofu|chilli|garlic|appetiser,28.5244,77.1855,4.5
-Sosoru,Hoisin Tofu,379,Appetiser,false,tofu|hoisin|appetiser,28.5244,77.1855,4.5
-Sosoru,Stir fried Exotic Veggies,389,Appetiser,false,vegetables|stir fried|appetiser,28.5244,77.1855,4.5
-Sosoru,Cheesy Corn Dog,399,Appetiser,false,corn|dog|cheese|appetiser,28.5244,77.1855,4.5
-Sosoru,Harumaki,399,Appetiser,false,harumaki|spring roll|appetiser,28.5244,77.1855,4.5
-Sosoru,Edamame (Salted / Spicy),419,Appetiser,false,edamame|appetiser,28.5244,77.1855,4.5
-Sosoru,Enoki Kakiage,429,Appetiser,false,enoki|kakiage|appetiser,28.5244,77.1855,4.5
-Sosoru,Crispy Honey Chilli Lotus Stem,429,Appetiser,false,lotus|stem|honey|chilli|appetiser,28.5244,77.1855,4.5
-Sosoru,Classic Chilli Chicken,399,Non-Vegetarian,false,chicken|chilli|appetiser,28.5244,77.1855,4.5
-Sosoru,Classic Chilly Garlic Chicken Wings,399,Non-Vegetarian,false,chicken|wings|chilly|garlic,28.5244,77.1855,4.5
-Sosoru,Stir fried Chicken with Bok Choy,399,Non-Vegetarian,false,chicken|bok|choy,28.5244,77.1855,4.5
-Sosoru,Crispy Wonton- Chicken,399,Non-Vegetarian,false,wonton|chicken|crispy,28.5244,77.1855,4.5
-Sosoru,Dak Nalgae,399,Non-Vegetarian,false,chicken|wings|korean,28.5244,77.1855,4.5
-Sosoru,Thai Basil Chicken,399,Non-Vegetarian,false,chicken|basil|thai,28.5244,77.1855,4.5
-Sosoru,Tori - Negima (Salted / Sweet Sauce),399,Non-Vegetarian,false,chicken|japanese|appetiser,28.5244,77.1855,4.5
-Sosoru,Tebasaki (Salted / Sweet Sauce),399,Non-Vegetarian,false,chicken|wings|japanese,28.5244,77.1855,4.5
-Sosoru,Chongqing Chicken,419,Non-Vegetarian,false,chicken|chongqing|spicy,28.5244,77.1855,4.5
-Sosoru,Tai Chi Chicken,419,Non-Vegetarian,false,chicken|tai|chi,28.5244,77.1855,4.5
-Sosoru,Sosoru Style Chicken Karaage,489,Non-Vegetarian,false,chicken|karaage|japanese,28.5244,77.1855,4.5
-Sosoru,Korean Corn Dog,499,Non-Vegetarian,false,corn|dog|korean,28.5244,77.1855,4.5
-Sosoru,Buta - bara - Yaki,549,Non-Vegetarian,false,pork|yaki|japanese,28.5244,77.1855,4.5
-Sosoru,Jeyuk Bokkeum,649,Non-Vegetarian,false,pork|jeyuk|korean,28.5244,77.1855,4.5
-Sosoru,Shanghai Style Pork Belly,699,Non-Vegetarian,false,pork|belly|shanghai,28.5244,77.1855,4.5
-Sosoru,Black Pepper Pork Ribs,959,Non-Vegetarian,false,pork|ribs|black pepper,28.5244,77.1855,4.5
-Sosoru,Teriyaki Bula Ribs,959,Non-Vegetarian,false,pork|ribs|teriyaki,28.5244,77.1855,4.5
-Sosoru,Thai Herb Pork Ribs,959,Non-Vegetarian,false,pork|ribs|thai,28.5244,77.1855,4.5
-Sosoru,Pan Fried Mushroom Bao,399,Bao,false,bao|mushroom|dim sum,28.5244,77.1855,4.5
-Sosoru,Spinach and Corn Cheese Bao,399,Bao,false,bao|spinach|corn|cheese,28.5244,77.1855,4.5
-Sosoru,Char Sui Chicken Bao,459,Bao,false,bao|chicken|char sui,28.5244,77.1855,4.5
-Sosoru,Pork Bao,499,Bao,false,bao|pork,28.5244,77.1855,4.5
-Sosoru,Vegan Tofu Open Bao,399,Bao,false,bao|tofu|vegan,28.5244,77.1855,4.5
-Sosoru,Crispy Chicken Open Bao,459,Bao,false,bao|chicken|crispy,28.5244,77.1855,4.5
-Sosoru,Korean Spicy Chicken Open Bao,499,Bao,false,bao|chicken|korean|spicy,28.5244,77.1855,4.5
-Sosoru,Pork Belly Open Bao,499,Bao,false,bao|pork|belly,28.5244,77.1855,4.5
-Sosoru,Tingmo (Tibetan Steamed Bun),149,Bao,false,bao|tibetan|steamed,28.5244,77.1855,4.5
-Sosoru,Absolut Vodka (30ml),245,Spirits,false,vodka|spirits,28.5244,77.1855,4.5
-Sosoru,Absolut Vodka (50ml),300,Spirits,false,vodka|spirits,28.5244,77.1855,4.5
-Sosoru,Bombay Sapphire (30ml),345,Spirits,false,gin|spirits,28.5244,77.1855,4.5
-Sosoru,Bombay Sapphire (50ml),400,Spirits,false,gin|spirits,28.5244,77.1855,4.5
-Sosoru,Roku (30ml),615,Spirits,false,gin|spirits,28.5244,77.1855,4.5
-Sosoru,Roku (50ml),700,Spirits,false,gin|spirits,28.5244,77.1855,4.5
-Sosoru,Singha Beer,755,Beer,false,beer|thai,28.5244,77.1855,4.5
-Sosoru,Corona Beer,445,Beer,false,beer|mexican,28.5244,77.1855,4.5
-Sosoru,Hoegaarden Beer,445,Beer,false,beer|belgian,28.5244,77.1855,4.5
-Sosoru,Soju (All flavors),1195,Soju,false,soju|korean,28.5244,77.1855,4.5
-Sosoru,Sake / Soju Bomb,2095,Soju,false,soju|bomb,28.5244,77.1855,4.5
-Sosoru,Jameson Whiskey (30ml),295,Whiskey,false,whiskey|irish,28.5244,77.1855,4.5
-Sosoru,Jameson Whiskey (30ml),300,Whiskey,false,whiskey|irish,28.5244,77.1855,4.5
-Sosoru,Chivas Regal 12yrs (30ml),375,Whiskey,false,whiskey|scotch,28.5244,77.1855,4.5
-Sosoru,JW Black Label (30ml),395,Whiskey,false,whiskey|scotch,28.5244,77.1855,4.5
-Sosoru,Glenlivet 12yrs (30ml),495,Whiskey,false,whiskey|scotch,28.5244,77.1855,4.5
-Sosoru,Glenfiddich 12yrs (30ml),525,Whiskey,false,whiskey|scotch,28.5244,77.1855,4.5
-Sosoru,JW Double Black (30ml),565,Whiskey,false,whiskey|scotch,28.5244,77.1855,4.5
-Sosoru,Toki (30ml),525,Whiskey,false,whiskey|japanese,28.5244,77.1855,4.5
-Sosoru,Akashi White oak (30ml),625,Whiskey,false,whiskey|japanese,28.5244,77.1855,4.5
-Sosoru,Hibiki (30ml),1095,Whiskey,false,whiskey|japanese,28.5244,77.1855,4.5
-Sosoru,The Yamazaki (30ml),1195,Whiskey,false,whiskey|japanese,28.5244,77.1855,4.5
-Sosoru,Sula Dindori Reserve Shiraz (Bottle),495,Wine,false,wine|red|indian,28.5244,77.1855,4.5
-Sosoru,Sula Dindori Reserve Shiraz (Glass),255,Wine,false,wine|red|indian,28.5244,77.1855,4.5
-Sosoru,Sula Sauvignon Blanc (Bottle),452,Wine,false,wine|white|indian,28.5244,77.1855,4.5
-Sosoru,Sula Sauvignon Blanc (Glass),95,Wine,false,wine|white|indian,28.5244,77.1855,4.5
-Sosoru,Jacobs Creek Shiraz Carbernet (Bottle),545,Wine,false,wine|red|australian,28.5244,77.1855,4.5
-Sosoru,Jacobs Creek Shiraz Carbernet (Glass),255,Wine,false,wine|red|australian,28.5244,77.1855,4.5
-Sosoru,Jacobs Creek Chardonnay (Bottle),545,Wine,false,wine|white|australian,28.5244,77.1855,4.5
-Sosoru,Jacobs Creek Chardonnay (Glass),255,Wine,false,wine|white|australian,28.5244,77.1855,4.5
-Sosoru,Hokkan Sen Sake (Glass),645,Sake,false,sake|japanese,28.5244,77.1855,4.5
-Sosoru,Hokkan Sen Sake (Bottle),2695,Sake,false,sake|japanese,28.5244,77.1855,4.5
-Sosoru,Shutoku Shuzo Sake (Glass),1245,Sake,false,sake|japanese,28.5244,77.1855,4.5
-Sosoru,Shutoku Shuzo Sake (Bottle),4995,Sake,false,sake|japanese,28.5244,77.1855,4.5
-Sosoru,Hokkan Kacho Fugetsu Sake (Glass),1195,Sake,false,sake|japanese,28.5244,77.1855,4.5
-Sosoru,Hokkan Kacho Fugetsu Sake (Bottle),1999,Sake,false,sake|japanese,28.5244,77.1855,4.5
-Sosoru,Lemon Iced Tea,169,Iced Tea,false,tea|iced|lemon,28.5244,77.1855,4.5
-Sosoru,Peach Iced Tea,169,Iced Tea,false,tea|iced|peach,28.5244,77.1855,4.5
-Sosoru,Passionfruit Iced Tea,169,Iced Tea,false,tea|iced|passionfruit,28.5244,77.1855,4.5
-Sosoru,Strawberry Iced Tea,199,Iced Tea,false,tea|iced|strawberry,28.5244,77.1855,4.5
-Sosoru,Lychee Iced Tea,199,Iced Tea,false,tea|iced|lychee,28.5244,77.1855,4.5
-Sosoru,Mango Iced Tea,199,Iced Tea,false,tea|iced|mango,28.5244,77.1855,4.5
-Sosoru,Watermelon Iced Tea,199,Iced Tea,false,tea|iced|watermelon,28.5244,77.1855,4.5
-Sosoru,Mugicha,119,Hot Tea,false,tea|hot|japanese,28.5244,77.1855,4.5
-Sosoru,Oolong,129,Hot Tea,false,tea|hot|oolong,28.5244,77.1855,4.5
-Sosoru,Sencha,139,Hot Tea,false,tea|hot|green,28.5244,77.1855,4.5
-Sosoru,Hojicha,139,Hot Tea,false,tea|hot|japanese,28.5244,77.1855,4.5
-Sosoru,Genmaicha,139,Hot Tea,false,tea|hot|japanese,28.5244,77.1855,4.5
-Sosoru,Gyokuro,149,Hot Tea,false,tea|hot|japanese,28.5244,77.1855,4.5
-Sosoru,Matcha,149,Hot Tea,false,tea|hot|matcha,28.5244,77.1855,4.5
-Sosoru,Matcha Iced Latte,229,Matcha,false,matcha|latte|iced,28.5244,77.1855,4.5
-Sosoru,Matcha Peach Latte,229,Matcha,false,matcha|latte|peach,28.5244,77.1855,4.5
-Sosoru,Matcha Mango,239,Matcha,false,matcha|mango,28.5244,77.1855,4.5
-Sosoru,Ichigo Iced Matcha,259,Matcha,false,matcha|strawberry|iced,28.5244,77.1855,4.5
-Sosoru,Yuzu Matcha,259,Matcha,false,matcha|yuzu,28.5244,77.1855,4.5
-Sosoru,Matcha Honey Lemon,259,Matcha,false,matcha|honey|lemon,28.5244,77.1855,4.5
-Sosoru,Matcha Cloud,259,Matcha,false,matcha|cloud,28.5244,77.1855,4.5
-Sosoru,Coco Matcha,259,Matcha,false,matcha|coconut,28.5244,77.1855,4.5
-Sosoru,Matcha Pour,259,Matcha,false,matcha|pour,28.5244,77.1855,4.5
-Sosoru,Classic Bubble Tea,209,Bubble Tea,false,bubble tea|classic,28.5244,77.1855,4.5
-Sosoru,Thai Bubble Tea,239,Bubble Tea,false,bubble tea|thai,28.5244,77.1855,4.5
-Sosoru,Taro Bubble Tea,239,Bubble Tea,false,bubble tea|taro,28.5244,77.1855,4.5
-Sosoru,Bubblegum Bubble Tea,239,Bubble Tea,false,bubble tea|bubblegum,28.5244,77.1855,4.5
-Sosoru,Chocolate Bubble Tea,249,Bubble Tea,false,bubble tea|chocolate,28.5244,77.1855,4.5
-Sosoru,Strawberry Bubble Tea,249,Bubble Tea,false,bubble tea|strawberry,28.5244,77.1855,4.5
-Sosoru,Mango Bubble Tea,249,Bubble Tea,false,bubble tea|mango,28.5244,77.1855,4.5
-Sosoru,Passion Fruit Bubble Tea,249,Bubble Tea,false,bubble tea|passionfruit,28.5244,77.1855,4.5
-Sosoru,Matcha Bubble Tea,259,Bubble Tea,false,bubble tea|matcha,28.5244,77.1855,4.5
-Sosoru,Chanh Soda,179,Mocktails & Refreshers,false,mocktail|soda,28.5244,77.1855,4.5
-Sosoru,Yuzu Hibiscus,219,Mocktails & Refreshers,false,mocktail|hibiscus|yuzu,28.5244,77.1855,4.5
-Sosoru,Tokyo Lemonade,239,Mocktails & Refreshers,false,mocktail|lemonade,28.5244,77.1855,4.5
-Sosoru,Dopamine Double,199,Mocktails & Refreshers,false,mocktail|dopamine,28.5244,77.1855,4.5
-Sosoru,Kiwi Snow,239,Mocktails & Refreshers,false,mocktail|kiwi,28.5244,77.1855,4.5
-Sosoru,Fruit Punch,239,Mocktails & Refreshers,false,mocktail|punch|fruit,28.5244,77.1855,4.5
-Sosoru,Asian Seasonal Sipper,239,Mocktails & Refreshers,false,mocktail|seasonal,28.5244,77.1855,4.5
-Sosoru,Virgin Mojito,239,Mocktails & Refreshers,false,mocktail|mojito,28.5244,77.1855,4.5
-Sosoru,Regular / Diet Coke,109,Aerated Drinks & Water,false,coke|soda,28.5244,77.1855,4.5
-Sosoru,Mineral Water,100,Aerated Drinks & Water,false,water|mineral,28.5244,77.1855,4.5
-Sosoru,Soda Water,145,Aerated Drinks & Water,false,water|soda,28.5244,77.1855,4.5
-Sosoru,Tonic Water,145,Aerated Drinks & Water,false,water|tonic,28.5244,77.1855,4.5
-Sosoru,Ginger Ale,145,Aerated Drinks & Water,false,ginger|ale|soda,28.5244,77.1855,4.5
+Sosoru,Chicken and Tofu Kimchi Stew,699,Pan - Asian Plates,false,kimchi|stew|chicken|tofu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Nasi Goreng,899,Pan - Asian Plates,false,nasi|goreng|seafood|fried rice,30.37223174636974,78.07942659643956,4.5
+Sosoru,Khao Suey (Veg),499,Pan - Asian Plates,false,khao|suey|noodle|thai|curry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Khao Suey (Chicken),599,Pan - Asian Plates,false,khao|suey|noodle|thai|curry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bulgogi (Chicken),749,Pan - Asian Plates,false,bulgogi|korean|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bulgogi (Pork),799,Pan - Asian Plates,false,bulgogi|korean|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tteok-boki,499,Pan - Asian Plates,false,tteok|boki|rice|cake,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tteok-boki,599,Pan - Asian Plates,false,tteok|boki|rice|cake,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tteok-boki,699,Pan - Asian Plates,false,tteok|boki|rice|cake,30.37223174636974,78.07942659643956,4.5
+Sosoru,Rabboki,519,Pan - Asian Plates,false,rabboki|korean|rice|noodle,30.37223174636974,78.07942659643956,4.5
+Sosoru,Rabboki,649,Pan - Asian Plates,false,rabboki|korean|rice|noodle,30.37223174636974,78.07942659643956,4.5
+Sosoru,Rabboki,719,Pan - Asian Plates,false,rabboki|korean|rice|noodle,30.37223174636974,78.07942659643956,4.5
+Sosoru,Katsu Curry (Tofu),599,Pan - Asian Plates,false,katsu|curry|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Katsu Curry (Chicken),649,Pan - Asian Plates,false,katsu|curry|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Katsu Curry (Prawn),699,Pan - Asian Plates,false,katsu|curry|fried|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Stew (Tofu),599,Pan - Asian Plates,false,kimchi|stew|tofu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Stew (Chicken),699,Pan - Asian Plates,false,kimchi|stew|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Stew (Pork),749,Pan - Asian Plates,false,kimchi|stew|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Samgyeopsal Set,1199,BBQ & Hotpot,false,bbq|pork|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Samgyeopsal Set (2-4 Servings),2199,BBQ & Hotpot,false,bbq|pork|korean|set,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yangnyeom Samgyeopsal Set,1399,BBQ & Hotpot,false,bbq|pork|spicy|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yangnyeom Samgyeopsal Set (2-4 Servings),2399,BBQ & Hotpot,false,bbq|pork|spicy|korean|set,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dak Gui Set,999,BBQ & Hotpot,false,bbq|chicken|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dak Gui Set (2-4 Servings),1699,BBQ & Hotpot,false,bbq|chicken|korean|set,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yangnyeom Dak Gui Set,1199,BBQ & Hotpot,false,bbq|chicken|spicy|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yangnyeom Dak Gui Set (2-4 Servings),1899,BBQ & Hotpot,false,bbq|chicken|spicy|korean|set,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dubu / Dak Kimchi Jjigae,1999,Jeongol / Korean Hotpot,false,hotpot|kimchi|tofu|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dubu / Dak Kimchi Jjigae (2-4 Servings),2099,Jeongol / Korean Hotpot,false,hotpot|kimchi|tofu|chicken|set,30.37223174636974,78.07942659643956,4.5
+Sosoru,Budae - Jjigae,2499,Jeongol / Korean Hotpot,false,hotpot|stew|korean|noodle,30.37223174636974,78.07942659643956,4.5
+Sosoru,Mandu Jeongol,2499,Jeongol / Korean Hotpot,false,hotpot|dumpling|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Haemul Jeongol,3499,Jeongol / Korean Hotpot,false,hotpot|seafood|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shabu Shabu,4599,Jeongol / Korean Hotpot,false,hotpot|shabu|seafood|vegetables,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tokyo Ramen,699,Ramen & Ramyeon,false,ramen|noodle|broth|miso,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kyushu Chicken Ramen,749,Ramen & Ramyeon,false,ramen|noodle|chicken|miso,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tonkotsu Ramen,799,Ramen & Ramyeon,false,ramen|noodle|pork|broth,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tempura Soba (Veg),499,Ramen & Ramyeon,false,soba|noodle|tempura|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tempura Soba (Chicken),599,Ramen & Ramyeon,false,soba|noodle|tempura|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tempura Soba (Prawn),699,Ramen & Ramyeon,false,soba|noodle|tempura|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Nabeyaki Udon (Veg),499,Ramen & Ramyeon,false,udon|noodle|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Nabeyaki Udon (Chicken),599,Ramen & Ramyeon,false,udon|noodle|japanese|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Nabeyaki Udon (Prawn),699,Ramen & Ramyeon,false,udon|noodle|japanese|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Korean Spicy Ramyeon (Veg),349,Ramen & Ramyeon,false,ramyeon|noodle|spicy|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Korean Spicy Ramyeon (Chicken),459,Ramen & Ramyeon,false,ramyeon|noodle|spicy|korean|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Korean Spicy Ramyeon (Pork),549,Ramen & Ramyeon,false,ramyeon|noodle|spicy|korean|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shin Ramyeon,349,Ramen & Ramyeon,false,ramyeon|noodle|instant,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shin Ramyeon,459,Ramen & Ramyeon,false,ramyeon|noodle|instant,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shin Ramyeon,549,Ramen & Ramyeon,false,ramyeon|noodle|instant,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jjangmyeon,349,Ramen & Ramyeon,false,jjangmyeon|noodle|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jjangmyeon,399,Ramen & Ramyeon,false,jjangmyeon|noodle|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jjangmyeon,499,Ramen & Ramyeon,false,jjangmyeon|noodle|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Katsudon,799,Donburi (Rice Bowl),false,katsu|donburi|rice|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Unagi eel,1199,Donburi (Rice Bowl),false,unagi|eel|donburi|rice,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chirashi Bowl,1299,Donburi (Rice Bowl),false,chirashi|sushi|rice|bowl,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Bokkeumbap (Veg),499,Donburi (Rice Bowl),false,kimchi|bokkeumbap|rice|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Bokkeumbap (Chicken),599,Donburi (Rice Bowl),false,kimchi|bokkeumbap|rice|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Bokkeumbap (Pork),699,Donburi (Rice Bowl),false,kimchi|bokkeumbap|rice|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bibimbap (Veg),599,Donburi (Rice Bowl),false,bibimbap|rice|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bibimbap (Chicken),699,Donburi (Rice Bowl),false,bibimbap|rice|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bibimbap (Pork),799,Donburi (Rice Bowl),false,bibimbap|rice|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kung Pao (Tofu),695,Hot Sizzling Bowl,false,kung|pao|sizzling|tofu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kung Pao (Chicken),745,Hot Sizzling Bowl,false,kung|pao|sizzling|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kung Pao (Prawn),795,Hot Sizzling Bowl,false,kung|pao|sizzling|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Black Bean (Tofu),695,Hot Sizzling Bowl,false,black|bean|sizzling|tofu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Black Bean (Chicken),745,Hot Sizzling Bowl,false,black|bean|sizzling|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Black Bean (Prawn),795,Hot Sizzling Bowl,false,black|bean|sizzling|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Chilli Basil (Tofu),695,Hot Sizzling Bowl,false,thai|chilli|basil|sizzling|tofu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Chilli Basil (Chicken),745,Hot Sizzling Bowl,false,thai|chilli|basil|sizzling|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Chilli Basil (Prawn),795,Hot Sizzling Bowl,false,thai|chilli|basil|sizzling|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegan Tofu Bento,699,Bento Box,false,bento|tofu|japanese|vegetarian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Katsu Chicken Bento,749,Bento Box,false,bento|katsu|chicken|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Pork Bento,799,Bento Box,false,bento|pork|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Prawn Bento,849,Bento Box,false,bento|prawn|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegetable Tempura Bento,859,Bento Box,false,bento|tempura|vegetable|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sosoru Karaage Bento,899,Bento Box,false,bento|karaage|chicken|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Ebi Tempura Bento,999,Bento Box,false,bento|tempura|prawn|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hakka Noodles,309,Rice & Noodles,false,noodles|hakka|stir fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chilly Garlic Stir Fried Noodles,309,Rice & Noodles,false,noodles|chilly|garlic,30.37223174636974,78.07942659643956,4.5
+Sosoru,Schezwan Stir Fried Noodles,309,Rice & Noodles,false,noodles|schezwan,30.37223174636974,78.07942659643956,4.5
+Sosoru,Pad Thai Noodles,409,Rice & Noodles,false,pad|thai|noodles,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yaki Soba,499,Rice & Noodles,false,yaki|soba|noodles,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yaki Udon,499,Rice & Noodles,false,yaki|udon|noodles,30.37223174636974,78.07942659643956,4.5
+Sosoru,Japchae (Veg),349,Rice & Noodles,false,japchae|noodles|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Japchae (Chicken),399,Rice & Noodles,false,japchae|noodles|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Japchae (Prawn),499,Rice & Noodles,false,japchae|noodles|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Steamed Rice (Short grain / Jasmine),299,Rice & Noodles,false,rice|steamed,30.37223174636974,78.07942659643956,4.5
+Sosoru,Burnt Garlic Rice,349,Rice & Noodles,false,rice|garlic|burnt,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chilly Garlic Fried Rice,349,Rice & Noodles,false,rice|chilly|garlic|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Chilli Rice,349,Rice & Noodles,false,rice|chilli|crispy|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kra Pao Rice,369,Rice & Noodles,false,rice|kra|pao|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Exotic Veggies,459,Main Course,false,curry|vegetable|veg,30.37223174636974,78.07942659643956,4.5
+Sosoru,Mapo Tofu,489,Main Course,false,curry|tofu|sichuan,30.37223174636974,78.07942659643956,4.5
+Sosoru,Massaman Curry,459,Main Course,false,curry|massaman|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Panang Curry,459,Main Course,false,curry|panang|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Red Curry,459,Main Course,false,curry|red|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Green Curry,459,Main Course,false,curry|green|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Classic Chilly Chicken,499,Main Course,false,chicken|chilly|indo-chinese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shredded Chicken,519,Main Course,false,chicken|shredded|curry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Fried Slice Lamb,599,Main Course,false,lamb|fried|curry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chilly Garlic Prawn,619,Main Course,false,prawn|chilly|garlic|curry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Truffle Mushroom,349,Dimsum & Dumplings,false,dimsum|mushroom|truffle,30.37223174636974,78.07942659643956,4.5
+Sosoru,Szechwan Mushroom,349,Dimsum & Dumplings,false,dimsum|mushroom|szechwan,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spinach and Corn,349,Dimsum & Dumplings,false,dimsum|spinach|corn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Asparagus and Edamame,349,Dimsum & Dumplings,false,dimsum|asparagus|edamame,30.37223174636974,78.07942659643956,4.5
+Sosoru,Szechwan Chicken,399,Dimsum & Dumplings,false,dimsum|chicken|szechwan,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Coriander,399,Dimsum & Dumplings,false,dimsum|chicken|coriander,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Gyoza,399,Dimsum & Dumplings,false,dimsum|gyoza|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Veg Dimsum Platter (12 Pcs),1099,Dimsum & Dumplings,false,dimsum|platter|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Non-Veg Dimsum Platter (12 Pcs),1299,Dimsum & Dumplings,false,dimsum|platter|non-vegetarian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Veg Momo (Steamed),239,Momo,false,momo|vegetable|steamed,30.37223174636974,78.07942659643956,4.5
+Sosoru,Veg Momo (Kothey),249,Momo,false,momo|vegetable|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Veg Momo (Chilly),259,Momo,false,momo|vegetable|chilly,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Momo (Steamed),269,Momo,false,momo|chicken|steamed,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Momo (Kothey),279,Momo,false,momo|chicken|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Momo (Chilly),289,Momo,false,momo|chicken|chilly,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Cheese Momo (Steamed),289,Momo,false,momo|chicken|cheese|steamed,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Cheese Momo (Kothey),299,Momo,false,momo|chicken|cheese|fried,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Cheese Momo (Chilly),309,Momo,false,momo|chicken|cheese|chilly,30.37223174636974,78.07942659643956,4.5
+Sosoru,Veg Shabaley,299,Shabaley,false,shabaley|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chicken Shabaley,319,Shabaley,false,shabaley|chicken,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yachae Gimbap,549,Gimbap,false,gimbap|vegetable|sushi rice,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dak Gimbap,599,Gimbap,false,gimbap|chicken|sushi rice,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dwaeji Gimbap,649,Gimbap,false,gimbap|pork|sushi rice,30.37223174636974,78.07942659643956,4.5
+Sosoru,Veg Sushi Platter (20 pcs),1899,Sushi Platter,false,sushi|platter|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Non-Veg Sushi Platter (20 pcs),2999,Sushi Platter,false,sushi|platter|non-vegetarian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Nigiri Platter (6 pcs),1299,Sushi Platter,false,nigiri|sushi|platter,30.37223174636974,78.07942659643956,4.5
+Sosoru,Nigiri Platter (12 pcs),2499,Sushi Platter,false,nigiri|sushi|platter,30.37223174636974,78.07942659643956,4.5
+Sosoru,Maguro (Tuna),799,Sashimi,false,sashimi|tuna,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sake (Salmon),859,Sashimi,false,sashimi|salmon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hamachi (Yellow Tail),899,Sashimi,false,sashimi|hamachi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Avocado Nigiri,399,Nigiri,false,nigiri|avocado,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crab stick Nigiri,399,Nigiri,false,nigiri|crab|stick,30.37223174636974,78.07942659643956,4.5
+Sosoru,Maguro Nigiri (Tuna),759,Nigiri,false,nigiri|tuna,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sake Nigiri (Salmon),799,Nigiri,false,nigiri|salmon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hamachi Nigiri (Yellow Tail),859,Nigiri,false,nigiri|hamachi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Unagi Eel Nigiri,959,Nigiri,false,nigiri|unagi|eel,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kappamaki Maki,649,Maki,false,maki|cucumber|sushi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tekka Maki,849,Maki,false,maki|tuna|sushi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sake Maki,849,Maki,false,maki|salmon|sushi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spicy Avocado Uramaki,699,Uramaki,false,uramaki|avocado|spicy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spicy Shiitake Uramaki,699,Uramaki,false,uramaki|shiitake|spicy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegetable California Roll,699,Uramaki,false,uramaki|california|vegetable,30.37223174636974,78.07942659643956,4.5
+Sosoru,Rainbow Roll,799,Uramaki,false,uramaki|rainbow|sushi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spicy Tuna Uramaki,799,Uramaki,false,uramaki|tuna|spicy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yellow Tail Hamachi Uramaki,799,Uramaki,false,uramaki|hamachi|yellow tail,30.37223174636974,78.07942659643956,4.5
+Sosoru,Alaska Roll,799,Uramaki,false,uramaki|alaska|salmon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Boston Roll,799,Uramaki,false,uramaki|boston|sushi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Caterpillar Roll,799,Uramaki,false,uramaki|caterpillar|unagi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Non veg California Roll,799,Uramaki,false,uramaki|california|crab,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spicy Salmon Uramaki,899,Uramaki,false,uramaki|salmon|spicy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Asparagus Tempura Uramaki,699,Tempura Roll,false,tempura|roll|asparagus,30.37223174636974,78.07942659643956,4.5
+Sosoru,Prawn Tempura Uramaki,799,Tempura Roll,false,tempura|roll|prawn,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegetables Dragon Roll,699,Tempura Roll,false,tempura|roll|vegetable|dragon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Prawn Dragon Roll,799,Tempura Roll,false,tempura|roll|prawn|dragon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Fried Calamari,599,Seafood,false,calamari|fried|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Spiced Calamari,659,Seafood,false,calamari|thai|spiced|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yangshuo Fish,659,Seafood,false,fish|yangshuo|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chilli Garlic Prawns,689,Seafood,false,prawns|chilli|garlic|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Butter Garlic Prawns,699,Seafood,false,prawns|butter|garlic|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Ebi Tempura,699,Seafood,false,tempura|prawn|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sosoru Special Spicy Shrimp Tempura,699,Seafood,false,tempura|shrimp|spicy|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Fried Lobster,2789,Seafood,true,lobster|fried|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Butter Garlic Lobster,2899,Seafood,true,lobster|butter|garlic|seafood,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kimchi Jiigae,259,Soups & Salads,false,soup|kimchi|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Miso Soup,259,Soups & Salads,false,soup|miso|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hot & Sour Soup,259,Soups & Salads,false,soup|hot|sour,30.37223174636974,78.07942659643956,4.5
+Sosoru,Manchow Soup,259,Soups & Salads,false,soup|manchow|indo-chinese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Talumein Soup,259,Soups & Salads,false,soup|talumein|indo-chinese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tom Yum,259,Soups & Salads,false,soup|tom|yum|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Oi Muchim,299,Soups & Salads,false,salad|cucumber|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spinach Gomae,329,Soups & Salads,false,salad|spinach|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Som Tam Salad,379,Soups & Salads,false,salad|papaya|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Avocado Edamame Lettuce Salad,399,Soups & Salads,false,salad|avocado|edamame,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kani Salad,489,Soups & Salads,false,salad|crab|kani,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jean / Korean Pancake,309,Appetiser,false,pancake|korean|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Honey Chilli Potato,329,Appetiser,false,potato|honey|chilli,30.37223174636974,78.07942659643956,4.5
+Sosoru,Classic Chilli Mushroom Dry,329,Appetiser,false,mushroom|chilli|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chilly Paneer Dry,339,Appetiser,false,paneer|chilly|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Wonton- Veg,339,Appetiser,false,wonton|crispy|vegetarian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegetable Tempura,349,Appetiser,false,tempura|vegetable|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegetable Kushiyaki (Salted / Sweet Sauce),349,Appetiser,false,kushiyaki|vegetable|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Stir fried Bok Choy,359,Appetiser,false,bok|choy|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chilli Garlic Tofu,379,Appetiser,false,tofu|chilli|garlic|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hoisin Tofu,379,Appetiser,false,tofu|hoisin|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Stir fried Exotic Veggies,389,Appetiser,false,vegetables|stir fried|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Cheesy Corn Dog,399,Appetiser,false,corn|dog|cheese|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Harumaki,399,Appetiser,false,harumaki|spring roll|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Edamame (Salted / Spicy),419,Appetiser,false,edamame|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Enoki Kakiage,429,Appetiser,false,enoki|kakiage|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Honey Chilli Lotus Stem,429,Appetiser,false,lotus|stem|honey|chilli|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Classic Chilli Chicken,399,Non-Vegetarian,false,chicken|chilli|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Classic Chilly Garlic Chicken Wings,399,Non-Vegetarian,false,chicken|wings|chilly|garlic,30.37223174636974,78.07942659643956,4.5
+Sosoru,Stir fried Chicken with Bok Choy,399,Non-Vegetarian,false,chicken|bok|choy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Wonton- Chicken,399,Non-Vegetarian,false,wonton|chicken|crispy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dak Nalgae,399,Non-Vegetarian,false,chicken|wings|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Basil Chicken,399,Non-Vegetarian,false,chicken|basil|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tori - Negima (Salted / Sweet Sauce),399,Non-Vegetarian,false,chicken|japanese|appetiser,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tebasaki (Salted / Sweet Sauce),399,Non-Vegetarian,false,chicken|wings|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chongqing Chicken,419,Non-Vegetarian,false,chicken|chongqing|spicy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tai Chi Chicken,419,Non-Vegetarian,false,chicken|tai|chi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sosoru Style Chicken Karaage,489,Non-Vegetarian,false,chicken|karaage|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Korean Corn Dog,499,Non-Vegetarian,false,corn|dog|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Buta - bara - Yaki,549,Non-Vegetarian,false,pork|yaki|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jeyuk Bokkeum,649,Non-Vegetarian,false,pork|jeyuk|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shanghai Style Pork Belly,699,Non-Vegetarian,false,pork|belly|shanghai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Black Pepper Pork Ribs,959,Non-Vegetarian,false,pork|ribs|black pepper,30.37223174636974,78.07942659643956,4.5
+Sosoru,Teriyaki Bula Ribs,959,Non-Vegetarian,false,pork|ribs|teriyaki,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Herb Pork Ribs,959,Non-Vegetarian,false,pork|ribs|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Pan Fried Mushroom Bao,399,Bao,false,bao|mushroom|dim sum,30.37223174636974,78.07942659643956,4.5
+Sosoru,Spinach and Corn Cheese Bao,399,Bao,false,bao|spinach|corn|cheese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Char Sui Chicken Bao,459,Bao,false,bao|chicken|char sui,30.37223174636974,78.07942659643956,4.5
+Sosoru,Pork Bao,499,Bao,false,bao|pork,30.37223174636974,78.07942659643956,4.5
+Sosoru,Vegan Tofu Open Bao,399,Bao,false,bao|tofu|vegan,30.37223174636974,78.07942659643956,4.5
+Sosoru,Crispy Chicken Open Bao,459,Bao,false,bao|chicken|crispy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Korean Spicy Chicken Open Bao,499,Bao,false,bao|chicken|korean|spicy,30.37223174636974,78.07942659643956,4.5
+Sosoru,Pork Belly Open Bao,499,Bao,false,bao|pork|belly,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tingmo (Tibetan Steamed Bun),149,Bao,false,bao|tibetan|steamed,30.37223174636974,78.07942659643956,4.5
+Sosoru,Absolut Vodka (30ml),245,Spirits,false,vodka|spirits,30.37223174636974,78.07942659643956,4.5
+Sosoru,Absolut Vodka (50ml),300,Spirits,false,vodka|spirits,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bombay Sapphire (30ml),345,Spirits,false,gin|spirits,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bombay Sapphire (50ml),400,Spirits,false,gin|spirits,30.37223174636974,78.07942659643956,4.5
+Sosoru,Roku (30ml),615,Spirits,false,gin|spirits,30.37223174636974,78.07942659643956,4.5
+Sosoru,Roku (50ml),700,Spirits,false,gin|spirits,30.37223174636974,78.07942659643956,4.5
+Sosoru,Singha Beer,755,Beer,false,beer|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Corona Beer,445,Beer,false,beer|mexican,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hoegaarden Beer,445,Beer,false,beer|belgian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Soju (All flavors),1195,Soju,false,soju|korean,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sake / Soju Bomb,2095,Soju,false,soju|bomb,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jameson Whiskey (30ml),295,Whiskey,false,whiskey|irish,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jameson Whiskey (30ml),300,Whiskey,false,whiskey|irish,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chivas Regal 12yrs (30ml),375,Whiskey,false,whiskey|scotch,30.37223174636974,78.07942659643956,4.5
+Sosoru,JW Black Label (30ml),395,Whiskey,false,whiskey|scotch,30.37223174636974,78.07942659643956,4.5
+Sosoru,Glenlivet 12yrs (30ml),495,Whiskey,false,whiskey|scotch,30.37223174636974,78.07942659643956,4.5
+Sosoru,Glenfiddich 12yrs (30ml),525,Whiskey,false,whiskey|scotch,30.37223174636974,78.07942659643956,4.5
+Sosoru,JW Double Black (30ml),565,Whiskey,false,whiskey|scotch,30.37223174636974,78.07942659643956,4.5
+Sosoru,Toki (30ml),525,Whiskey,false,whiskey|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Akashi White oak (30ml),625,Whiskey,false,whiskey|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hibiki (30ml),1095,Whiskey,false,whiskey|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,The Yamazaki (30ml),1195,Whiskey,false,whiskey|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sula Dindori Reserve Shiraz (Bottle),495,Wine,false,wine|red|indian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sula Dindori Reserve Shiraz (Glass),255,Wine,false,wine|red|indian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sula Sauvignon Blanc (Bottle),452,Wine,false,wine|white|indian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sula Sauvignon Blanc (Glass),95,Wine,false,wine|white|indian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jacobs Creek Shiraz Carbernet (Bottle),545,Wine,false,wine|red|australian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jacobs Creek Shiraz Carbernet (Glass),255,Wine,false,wine|red|australian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jacobs Creek Chardonnay (Bottle),545,Wine,false,wine|white|australian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Jacobs Creek Chardonnay (Glass),255,Wine,false,wine|white|australian,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hokkan Sen Sake (Glass),645,Sake,false,sake|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hokkan Sen Sake (Bottle),2695,Sake,false,sake|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shutoku Shuzo Sake (Glass),1245,Sake,false,sake|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Shutoku Shuzo Sake (Bottle),4995,Sake,false,sake|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hokkan Kacho Fugetsu Sake (Glass),1195,Sake,false,sake|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hokkan Kacho Fugetsu Sake (Bottle),1999,Sake,false,sake|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Lemon Iced Tea,169,Iced Tea,false,tea|iced|lemon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Peach Iced Tea,169,Iced Tea,false,tea|iced|peach,30.37223174636974,78.07942659643956,4.5
+Sosoru,Passionfruit Iced Tea,169,Iced Tea,false,tea|iced|passionfruit,30.37223174636974,78.07942659643956,4.5
+Sosoru,Strawberry Iced Tea,199,Iced Tea,false,tea|iced|strawberry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Lychee Iced Tea,199,Iced Tea,false,tea|iced|lychee,30.37223174636974,78.07942659643956,4.5
+Sosoru,Mango Iced Tea,199,Iced Tea,false,tea|iced|mango,30.37223174636974,78.07942659643956,4.5
+Sosoru,Watermelon Iced Tea,199,Iced Tea,false,tea|iced|watermelon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Mugicha,119,Hot Tea,false,tea|hot|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Oolong,129,Hot Tea,false,tea|hot|oolong,30.37223174636974,78.07942659643956,4.5
+Sosoru,Sencha,139,Hot Tea,false,tea|hot|green,30.37223174636974,78.07942659643956,4.5
+Sosoru,Hojicha,139,Hot Tea,false,tea|hot|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Genmaicha,139,Hot Tea,false,tea|hot|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Gyokuro,149,Hot Tea,false,tea|hot|japanese,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha,149,Hot Tea,false,tea|hot|matcha,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Iced Latte,229,Matcha,false,matcha|latte|iced,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Peach Latte,229,Matcha,false,matcha|latte|peach,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Mango,239,Matcha,false,matcha|mango,30.37223174636974,78.07942659643956,4.5
+Sosoru,Ichigo Iced Matcha,259,Matcha,false,matcha|strawberry|iced,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yuzu Matcha,259,Matcha,false,matcha|yuzu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Honey Lemon,259,Matcha,false,matcha|honey|lemon,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Cloud,259,Matcha,false,matcha|cloud,30.37223174636974,78.07942659643956,4.5
+Sosoru,Coco Matcha,259,Matcha,false,matcha|coconut,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Pour,259,Matcha,false,matcha|pour,30.37223174636974,78.07942659643956,4.5
+Sosoru,Classic Bubble Tea,209,Bubble Tea,false,bubble tea|classic,30.37223174636974,78.07942659643956,4.5
+Sosoru,Thai Bubble Tea,239,Bubble Tea,false,bubble tea|thai,30.37223174636974,78.07942659643956,4.5
+Sosoru,Taro Bubble Tea,239,Bubble Tea,false,bubble tea|taro,30.37223174636974,78.07942659643956,4.5
+Sosoru,Bubblegum Bubble Tea,239,Bubble Tea,false,bubble tea|bubblegum,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chocolate Bubble Tea,249,Bubble Tea,false,bubble tea|chocolate,30.37223174636974,78.07942659643956,4.5
+Sosoru,Strawberry Bubble Tea,249,Bubble Tea,false,bubble tea|strawberry,30.37223174636974,78.07942659643956,4.5
+Sosoru,Mango Bubble Tea,249,Bubble Tea,false,bubble tea|mango,30.37223174636974,78.07942659643956,4.5
+Sosoru,Passion Fruit Bubble Tea,249,Bubble Tea,false,bubble tea|passionfruit,30.37223174636974,78.07942659643956,4.5
+Sosoru,Matcha Bubble Tea,259,Bubble Tea,false,bubble tea|matcha,30.37223174636974,78.07942659643956,4.5
+Sosoru,Chanh Soda,179,Mocktails & Refreshers,false,mocktail|soda,30.37223174636974,78.07942659643956,4.5
+Sosoru,Yuzu Hibiscus,219,Mocktails & Refreshers,false,mocktail|hibiscus|yuzu,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tokyo Lemonade,239,Mocktails & Refreshers,false,mocktail|lemonade,30.37223174636974,78.07942659643956,4.5
+Sosoru,Dopamine Double,199,Mocktails & Refreshers,false,mocktail|dopamine,30.37223174636974,78.07942659643956,4.5
+Sosoru,Kiwi Snow,239,Mocktails & Refreshers,false,mocktail|kiwi,30.37223174636974,78.07942659643956,4.5
+Sosoru,Fruit Punch,239,Mocktails & Refreshers,false,mocktail|punch|fruit,30.37223174636974,78.07942659643956,4.5
+Sosoru,Asian Seasonal Sipper,239,Mocktails & Refreshers,false,mocktail|seasonal,30.37223174636974,78.07942659643956,4.5
+Sosoru,Virgin Mojito,239,Mocktails & Refreshers,false,mocktail|mojito,30.37223174636974,78.07942659643956,4.5
+Sosoru,Regular / Diet Coke,109,Aerated Drinks & Water,false,coke|soda,30.37223174636974,78.07942659643956,4.5
+Sosoru,Mineral Water,100,Aerated Drinks & Water,false,water|mineral,30.37223174636974,78.07942659643956,4.5
+Sosoru,Soda Water,145,Aerated Drinks & Water,false,water|soda,30.37223174636974,78.07942659643956,4.5
+Sosoru,Tonic Water,145,Aerated Drinks & Water,false,water|tonic,30.37223174636974,78.07942659643956,4.5
+Sosoru,Ginger Ale,145,Aerated Drinks & Water,false,ginger|ale|soda,30.37223174636974,78.07942659643956,4.5

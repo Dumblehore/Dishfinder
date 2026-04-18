@@ -16,73 +16,138 @@ const seedKaggleData = async () => {
         await Dish.deleteMany({});
         console.log('🗑️ Wiped old mock data to make room for massive Kaggle payload...');
 
-        const dishesToInsert = [];
+        // Dynamically find all CSVs in the data folder
+        const csvFiles = fs.readdirSync(__dirname + '/../data/').filter(f => f.endsWith('.csv'));
+        console.log(`📂 Found ${csvFiles.length} CSV datasets! Preparing Universal Multiplexer...`);
+
         // Keep a global track of what we added to prevent duplicates across the entire dataset!
         const addedDishes = new Set();
+        let totalInserted = 0;
 
-        // Read the CSV Stream
-        fs.createReadStream(__dirname + '/../data/dehradun.csv')
-            .pipe(csv())
-            .on('data', (row) => {
-                // Skip rows with bad GPS coordinates
-                if (!row.latitude || !row.longitude || row.latitude === '0.0' || row.longitude === '0.0') return;
+        for (const file of csvFiles) {
+            console.log(`\n⏳ Processing Dataset: ${file}...`);
+            const dishesToInsert = [];
+            
+            await new Promise((resolve, reject) => {
+                fs.createReadStream(__dirname + '/../data/' + file)
+                    .pipe(csv({
+                        mapHeaders: ({ header }) => {
+                            const h = header.trim();
+                            const hl = h.toLowerCase();
+                            if (h === 'Restaurant_Name' || hl === 'restaurant name' || hl === 'name') return 'name';
+                            if (h === 'Category' || hl === 'cuisines') return 'cuisines';
+                            if (h === 'Pricing_for_2' || hl === 'average cost for two' || hl === 'average_cost_for_two') return 'average_cost_for_two';
+                            if (h === 'Dining_Rating' || hl === 'aggregate rating' || hl === 'aggregate_rating') return 'aggregate_rating';
+                            if (h === 'Known_For2' || hl === 'known_for2') return 'known_for2';
+                            if (h === 'Locality' || hl === 'locality') return 'locality';
+                            if (h === 'Country Code' || hl === 'country_code') return 'country_code';
+                            return hl;
+                        }
+                    }))
+                    .on('data', (row) => {
+                        // Skip rows with bad GPS coordinates
+                        if (!row.latitude || !row.longitude || row.latitude === '0.0' || row.longitude === '0.0') return;
 
-                const cuisineToDishMap = {
-                    'momos': ['Chicken Steamed Momos', 'Vegetable Fried Momos', 'Kurkure Momos'],
-                    'pizza': ['Margherita Wood Fired Pizza', 'Pepperoni Pizza', 'Farmhouse Pizza'],
-                    'chinese': ['Chilli Garlic Noodles', 'Veg Manchurian Gravy', 'Chicken Fried Rice'],
-                    'tibetan': ['Chicken Thukpa', 'Pork Tingmo', 'Vegetable Khow Suey'],
-                    'fast food': ['Aloo Tikki Burger', 'Cheesy Loaded Fries', 'Cold Coffee'],
-                    'north indian': ['Butter Chicken', 'Dal Makhani', 'Paneer Tikka Masala'],
-                    'desserts': ['Chocolate Lava Cake', 'Red Velvet Pastry', 'Hot Brownie with Ice Cream'],
-                    'street food': ['Pani Puri', 'Aloo Chaat', 'Vada Pav']
-                };
+                        // Geofencing: If country code exists, strictly ensure it's computationally mapped to India (1)
+                        if (row.country_code && row.country_code !== '1') return;
 
-                const cuisines = row.cuisines ? row.cuisines.toLowerCase().split(',') : ['fast food'];
+                        // Quality Filter: Strictly import restaurants with a decent rating
+                        const rating = parseFloat(row.aggregate_rating) || 0;
+                        if (rating !== 0 && rating < 3.5) return;
 
-                cuisines.forEach(cuisine => {
-                    const cleanName = cuisine.trim();
-                    
-                    const specificDishes = cuisineToDishMap[cleanName] || [cuisine.trim().charAt(0).toUpperCase() + cuisine.trim().slice(1)];
+                        const cuisineToDishMap = {
+                            'momos': ['Chicken Steamed Momos', 'Vegetable Fried Momos', 'Kurkure Momos'],
+                            'pizza': ['Margherita Wood Fired Pizza', 'Pepperoni Pizza', 'Farmhouse Pizza'],
+                            'chinese': ['Chilli Garlic Noodles', 'Veg Manchurian Gravy', 'Chicken Fried Rice'],
+                            'tibetan': ['Chicken Thukpa', 'Pork Tingmo'],
+                            'fast food': ['Aloo Tikki Burger', 'Cheesy Loaded Fries', 'Cold Coffee'],
+                            'north indian': ['Butter Chicken', 'Dal Makhani', 'Paneer Tikka Masala', 'Garlic Naan', 'Tandoori Roti'],
+                            'south indian': ['Masala Dosa', 'Idli Sambar', 'Medu Vada', 'Rava Dosa'],
+                            'desserts': ['Chocolate Lava Cake', 'Red Velvet Pastry', 'Hot Brownie'],
+                            'street food': ['Pani Puri', 'Aloo Chaat', 'Vada Pav', 'Pav Bhaji'],
+                            'beverages': ['Cold Coffee', 'Masala Chai', 'Mango Shake', 'Lassi'],
+                            'biryani': ['Chicken Dum Biryani', 'Mutton Biryani', 'Veg Biryani'],
+                            'bakery': ['Black Forest Cake', 'Chocolate Truffle', 'Pineapple Pastry'],
+                            'cafe': ['Cappuccino', 'Cafe Latte', 'Garlic Bread', 'White Sauce Pasta'],
+                            'continental': ['Grilled Chicken Breast', 'Fish and Chips', 'Mushroom Risotto'],
+                            'healthy food': ['Quinoa Salad', 'Oatmeal Bowl', 'Detox Juice']
+                        };
 
-                    specificDishes.forEach((specificDish) => {
-                        // Create a unique global key specifically for this restaurant and dish
-                        const uniqueKey = `${row.name.trim()}-${specificDish}`;
-                        if (addedDishes.has(uniqueKey)) return; 
-                        addedDishes.add(uniqueKey);
+                        let specificDishes = [];
+                        // 1. Primary Generation: Extract real signature dishes documented in Known_For2
+                        if (row.known_for2 && row.known_for2.trim() !== '') {
+                            specificDishes = row.known_for2.split(',').map(d => d.trim()).filter(d => d.length > 0);
+                        } 
+                        
+                        // 2. Fallback Generation: Reverse guess from tag if no signatures found
+                        if (specificDishes.length === 0) {
+                            const cuisines = row.cuisines ? row.cuisines.toLowerCase().split(',') : ['fast food'];
+                            cuisines.forEach(cuisine => {
+                                const cleanName = cuisine.trim();
+                                const defaultDishes = cuisineToDishMap[cleanName] || [cuisine.trim().charAt(0).toUpperCase() + cuisine.trim().slice(1)];
+                                specificDishes.push(...defaultDishes);
+                            });
+                        }
 
-                        // Give a realistic price variation (e.g. Kurkure momos cost more than Steamed)
-                        const priceVariance = Math.floor(Math.random() * 50) + 10;
-                        const approximatePrice = Math.max(80, Math.round((parseInt(row.average_cost_for_two) || 300) / 2)) + priceVariance;
+                        // De-duplicate
+                        specificDishes = [...new Set(specificDishes)];
+                        const locality = row.locality ? row.locality.trim() : '';
 
-                        dishesToInsert.push({
-                            dish_name: specificDish,
-                            normalized_name: specificDish.toLowerCase(),
-                            synonyms: [cleanName, 'food', specificDish.split(' ')[0].toLowerCase()],
-                            restaurant_name: row.name.trim(),
-                            price: approximatePrice,
-                            rating: parseFloat(row.aggregate_rating) || 0,
-                            is_rare: Math.random() > 0.8, // 20% chance of being rare
-                            location: {
-                                type: 'Point',
-                                coordinates: [parseFloat(row.longitude), parseFloat(row.latitude)] 
-                            }
+                        specificDishes.forEach((specificDish) => {
+                            // Create a unique global key specifically for this restaurant and dish
+                            const uniqueKey = `${row.name.trim()}-${specificDish}`;
+                            if (addedDishes.has(uniqueKey)) return; 
+                            addedDishes.add(uniqueKey);
+
+                            // Dynamic Pricing calculation: A dish is roughly 30% to 50% of the "Cost For 2"
+                            const basePrice = parseInt(row.average_cost_for_two) || 400;
+                            const factor = (Math.random() * 0.2) + 0.3; 
+                            const approximatePrice = Math.max(60, Math.round(basePrice * factor));
+
+                            let synonyms = ['food', specificDish.split(' ')[0].toLowerCase()];
+                            if (locality) synonyms.push(locality.toLowerCase());
+                            row.cuisines && row.cuisines.split(',').forEach(c => synonyms.push(c.trim().toLowerCase()));
+
+                            dishesToInsert.push({
+                                dish_name: specificDish,
+                                normalized_name: specificDish.toLowerCase(),
+                                synonyms: synonyms,
+                                restaurant_name: row.name.trim(),
+                                price: approximatePrice,
+                                rating: rating,
+                                is_rare: Math.random() > 0.8,
+                                location: {
+                                    type: 'Point',
+                                    coordinates: [parseFloat(row.longitude), parseFloat(row.latitude)] 
+                                }
+                            });
                         });
+                    })
+                    .on('end', async () => {
+                        try {
+                            if (dishesToInsert.length > 0) {
+                                // Mongoose handles batch inserting very efficiently
+                                await Dish.insertMany(dishesToInsert);
+                                totalInserted += dishesToInsert.length;
+                                console.log(`✅ Success! Injected ${dishesToInsert.length} dishes from ${file}`);
+                            } else {
+                                console.log(`⚠️ No valid dishes found in ${file}.`);
+                            }
+                            resolve();
+                        } catch (insertError) {
+                            console.error(`❌ Insertion Error on ${file}:`, insertError);
+                            reject(insertError);
+                        }
+                    })
+                    .on('error', (err) => {
+                        console.error(`❌ File read error on ${file}:`, err);
+                        reject(err);
                     });
-                });
-            })
-            .on('end', async () => {
-                console.log(`📊 Processing complete. Found ${dishesToInsert.length} searchable items.`);
-                try {
-                    // Mongoose handles batch inserting very efficiently
-                    await Dish.insertMany(dishesToInsert);
-                    console.log(`✅ Success! Injected ${dishesToInsert.length} Real-World Dishes into Live Database!`);
-                    process.exit();
-                } catch (insertError) {
-                    console.error('❌ Insertion Error:', insertError);
-                    process.exit(1);
-                }
             });
+        }
+        
+        console.log(`\n🎉 UNIVERSAL MULTIPLEXER COMPLETE! Grand Total: ${totalInserted} Live Dishes Injected!`);
+        process.exit();
 
     } catch (error) {
         console.error('❌ Database connection error:', error);

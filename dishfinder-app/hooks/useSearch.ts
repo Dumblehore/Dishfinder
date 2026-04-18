@@ -1,65 +1,56 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useLocation } from './useLocation';
 
-// Using localhost works for iOS Simulator, but Android Emulator needs 10.0.2.2!
-// If testing on a physical phone via Expo Go, you MUST use your computer's local IP (e.g. 192.168.1.15)
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'https://dishfinder-uez2.onrender.com'; // Production Render URL
 
 export function useSearch() {
-  const [query, setQuery] = useState('');
+  const { coords, ready } = useLocation();
+  const [query, setQuery]     = useState('');
+  const [sortBy, setSortBy]   = useState('relevance');
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError]     = useState<string | null>(null);
+  const [slowServer, setSlowServer] = useState(false);
 
-  // Debounced search trigger
   useEffect(() => {
+    if (!ready) return;
     const handler = setTimeout(() => {
-      fetchDishes(query);
-    }, 400); // 400ms delay for live search typing
+      fetchDishes(query, sortBy, coords);
+    }, 400);
+    return () => clearTimeout(handler);
+  }, [query, sortBy, coords.lat, coords.lng, ready]);
 
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [query]);
+  const fetchDishes = async (
+    searchQuery: string,
+    sortParam: string,
+    location: { lat: number; lng: number }
+  ) => {
+    setLoading(true);
+    setError(null);
+    setSlowServer(false);
 
-  const fetchDishes = async (searchQuery: string) => {
+    // Show "server warming up" warning after 2.5s
+    const slowTimer = setTimeout(() => setSlowServer(true), 2500);
+
     try {
-      setLoading(true);
-      setError(null);
-
-      // Default to New Delhi (Connaught Place) for MVP testing.
-      // In Production, we'd use expo-location to inject real device coords here.
-      const lat = 28.6139;
-      const lng = 77.2090;
-
-      let url = `${API_BASE_URL}/api/search?lat=${lat}&lng=${lng}`;
-      if (searchQuery.trim().length > 0) {
-        url += `&q=${encodeURIComponent(searchQuery)}`;
-      }
+      let url = `${API_BASE_URL}/api/search?lat=${location.lat}&lng=${location.lng}`;
+      if (searchQuery.trim().length > 0) url += `&q=${encodeURIComponent(searchQuery)}`;
+      if (sortParam !== 'relevance')     url += `&sortBy=${sortParam}`;
 
       const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      if (!response.ok) throw new Error('Network response was not ok');
 
       const data = await response.json();
       setResults(data.results || []);
     } catch (err) {
-      console.error('Search error:', err);
-      // NOTE: Fallback to an empty array to prevent crashing if the user is 
-      // on a physical device and forgot to change localhost to their IP!
-      setError('Could not connect to the backend. Make sure your IP is correctly set in useSearch.ts');
+      setError('Could not reach the server. Please try again.');
       setResults([]);
     } finally {
+      clearTimeout(slowTimer);
+      setSlowServer(false);
       setLoading(false);
     }
   };
 
-  return {
-    query,
-    setQuery,
-    results,
-    loading,
-    error,
-    refresh: () => fetchDishes(query)
-  };
+  return { query, setQuery, sortBy, setSortBy, results, loading, error, slowServer };
 }

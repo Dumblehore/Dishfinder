@@ -1,112 +1,242 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import {
+  View, Text, StyleSheet, FlatList,
+  TouchableOpacity, StatusBar, ScrollView
+} from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useLocation } from '../../hooks/useLocation';
+import DishCard from '../../components/DishCard';
+import SkeletonCard from '../../components/SkeletonCard';
 
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Fonts } from '@/constants/theme';
+const API_BASE_URL = 'https://dishfinder-uez2.onrender.com';
 
-export default function TabTwoScreen() {
+const COLORS = {
+  background: '#121416',
+  surface: '#1a1c1e',
+  surfaceHigh: '#282a2c',
+  surfaceHighest: '#333537',
+  primary: '#adc7ff',
+  onSurface: '#e2e2e5',
+  onSurfaceVariant: '#c1c6d7',
+  outline: '#414754',
+};
+
+// Category cards for the browse grid
+const CATEGORIES = [
+  { label: 'Momos',      emoji: '🥟', query: 'momo',    color: '#1a2a4a' },
+  { label: 'Biryani',    emoji: '🍛', query: 'biryani', color: '#2a1a10' },
+  { label: 'Chicken',    emoji: '🍗', query: 'chicken', color: '#2a1a20' },
+  { label: 'Paneer',     emoji: '🧀', query: 'paneer',  color: '#1a2a1a' },
+  { label: 'Rice',       emoji: '🍚', query: 'rice',    color: '#1e1e10' },
+  { label: 'Chai',       emoji: '☕', query: 'chai',    color: '#1c1a10' },
+  { label: 'Thali',      emoji: '🍽️', query: 'thali',  color: '#2a1a2a' },
+  { label: 'Parantha',   emoji: '🫓', query: 'parantha',color: '#2a2010' },
+  { label: 'Noodles',    emoji: '🍜', query: 'noodle', color: '#101a2a' },
+  { label: 'Kebab',      emoji: '🍢', query: 'kebab',  color: '#2a1510' },
+  { label: 'Dal',        emoji: '🫘', query: 'dal',     color: '#1a2a10' },
+  { label: 'Cold Drink', emoji: '🥤', query: 'juice',  color: '#101e2a' },
+];
+
+export default function ExploreScreen() {
+  const [selected, setSelected] = useState<string | null>(null);
+  const [results, setResults] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const { coords } = useLocation();
+  const insets = useSafeAreaInsets();
+
+  const handleCategory = async (query: string) => {
+    if (selected === query) {
+      setSelected(null);
+      setResults([]);
+      return;
+    }
+    setSelected(query);
+    setLoading(true);
+    setResults([]);
+    try {
+      const url = `${API_BASE_URL}/api/search?lat=${coords.lat}&lng=${coords.lng}&q=${encodeURIComponent(query)}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setResults(data.results || []);
+    } catch {
+      setResults([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const selectedCategory = CATEGORIES.find(c => c.query === selected);
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+    <View style={[styles.safe, { paddingTop: insets.top }]}>
+      <StatusBar barStyle="light-content" backgroundColor={COLORS.background} />
+
+      {/* ── Header ── */}
+      <View style={styles.header}>
+        <Text style={styles.title}>Explore</Text>
+        <Text style={styles.subtitle}>Browse by category</Text>
+      </View>
+
+      {/* ── Category chips (horizontal scroll) ── */}
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.chipsRow}
+        style={styles.chipsScroll}
+      >
+        {CATEGORIES.map(cat => (
+          <TouchableOpacity
+            key={cat.query}
+            style={[
+              styles.chip,
+              selected === cat.query && styles.chipActive,
+              selected === cat.query && { borderColor: COLORS.primary }
+            ]}
+            onPress={() => handleCategory(cat.query)}
+            activeOpacity={0.75}
+          >
+            <Text style={styles.chipEmoji}>{cat.emoji}</Text>
+            <Text style={[styles.chipLabel, selected === cat.query && styles.chipLabelActive]}>
+              {cat.label}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+
+      {/* ── Results ── */}
+      {!selected ? (
+        // No category selected state
+        <View style={styles.emptyState}>
+          <Text style={styles.emptyEmoji}>👆</Text>
+          <Text style={styles.emptyTitle}>Pick a category</Text>
+          <Text style={styles.emptySub}>Tap any category above to browse dishes near you</Text>
+        </View>
+      ) : loading ? (
+        <View style={{ paddingHorizontal: 16, paddingTop: 8 }}>
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
+        </View>
+      ) : results.length === 0 ? (
+        <View style={styles.emptyState}>
+          <Text style={styles.emptyEmoji}>😔</Text>
+          <Text style={styles.emptyTitle}>Nothing found</Text>
+          <Text style={styles.emptySub}>
+            No {selectedCategory?.label} spots found nearby. Try another category!
+          </Text>
+        </View>
+      ) : (
+        <FlatList
+          data={results}
+          keyExtractor={item => item._id}
+          contentContainerStyle={styles.list}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+          ListHeaderComponent={
+            <View style={styles.resultHeader}>
+              <View style={styles.resultHeaderLeft}>
+                <View style={[styles.resultDot, { backgroundColor: selectedCategory?.color ?? COLORS.primary }]} />
+                <Text style={styles.resultCount}>{results.length} spots found for <Text style={{ color: COLORS.primary }}>{selectedCategory?.label}</Text></Text>
+              </View>
+              <TouchableOpacity
+                style={styles.clearBtn}
+                onPress={() => { setSelected(null); setResults([]); }}
+              >
+                <Text style={styles.clearBtnText}>✕ Clear</Text>
+              </TouchableOpacity>
+            </View>
+          }
+          renderItem={({ item }) => <DishCard item={item} />}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          type="title"
-          style={{
-            fontFamily: Fonts.rounded,
-          }}>
-          Explore
-        </ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
+      )}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  safe: { flex: 1, backgroundColor: COLORS.background },
+
+  header: {
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    paddingBottom: 16,
+    backgroundColor: COLORS.surface,
+    borderBottomWidth: 0.5,
+    borderBottomColor: COLORS.outline,
   },
-  titleContainer: {
+  title: { fontSize: 28, fontWeight: '800', color: COLORS.onSurface, letterSpacing: -1 },
+  subtitle: { fontSize: 14, color: COLORS.onSurfaceVariant, marginTop: 2 },
+
+  chipsScroll: {
+    flexGrow: 0,
+    minHeight: 80, // Explicitly reserve enough height to prevent Android layout collapse clipping
+    backgroundColor: COLORS.surface,
+    borderBottomWidth: 0.5,
+    borderBottomColor: COLORS.outline,
+  },
+  chipsRow: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    gap: 10,
+    alignItems: 'center',
+  },
+  chip: {
     flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: COLORS.surfaceHighest,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 9999,
+    borderWidth: 1.5,
+    borderColor: 'transparent',
+  },
+  chipActive: {
+    backgroundColor: 'rgba(173,199,255,0.12)',
+  },
+  chipEmoji: { fontSize: 16 },
+  chipLabel: { color: COLORS.onSurfaceVariant, fontSize: 14, fontWeight: '600' },
+  chipLabelActive: { color: COLORS.primary, fontWeight: '700' },
+
+  // Empty / loading
+  emptyState: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 32,
+    marginTop: -40,
+  },
+  emptyEmoji: { fontSize: 52, marginBottom: 16 },
+  emptyTitle: { fontSize: 22, fontWeight: '700', color: COLORS.onSurface, marginBottom: 8 },
+  emptySub: { color: COLORS.onSurfaceVariant, fontSize: 15, textAlign: 'center', lineHeight: 22 },
+
+  // Results list
+  list: { paddingHorizontal: 16, paddingBottom: 120, paddingTop: 12 },
+  resultHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 16,
+  },
+  resultHeaderLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 8,
+    flex: 1,
+  },
+  resultDot: { width: 8, height: 8, borderRadius: 4 },
+  resultCount: { color: COLORS.onSurfaceVariant, fontSize: 13, fontWeight: '600' },
+  clearBtn: {
+    backgroundColor: 'rgba(173,199,255,0.12)',
+    borderRadius: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderWidth: 1,
+    borderColor: 'rgba(173,199,255,0.3)',
+  },
+  clearBtnText: {
+    color: COLORS.primary,
+    fontSize: 13,
+    fontWeight: '700',
   },
 });

@@ -145,6 +145,25 @@ exports.searchDishes = async (req, res) => {
             finalResults.sort((a, b) => b.totalScore - a.totalScore);
         }
 
+        // ── RESTAURANT DIVERSITY LIMITER ──────────────────────────────────────
+        // Prevent a single close restaurant from completely hijacking the feed.
+        // We keep only the highest-scoring dishes (since we just sorted them).
+        const restaurantCounts = {};
+        finalResults = finalResults.filter(dish => {
+            const rName = dish.restaurant_name?.toLowerCase();
+            if (!restaurantCounts[rName]) restaurantCounts[rName] = 0;
+            
+            // The user strictly requested that even when searching a direct category (like "momos"), 
+            // the feed should only ever show 1 absolutely best-ranked dish per restaurant.
+            const allowedPerRestaurant = 1;
+            
+            if (restaurantCounts[rName] >= allowedPerRestaurant) return false;
+            
+            restaurantCounts[rName]++;
+            return true;
+        });
+        // ──────────────────────────────────────────────────────────────────────
+
         // 5. Apply Smart Tags
         if (finalResults.length > 0) {
             // Find closest
@@ -174,3 +193,47 @@ exports.searchDishes = async (req, res) => {
         res.status(500).json({ error: "Server error during search." });
     }
 };
+
+// ── GET /api/restaurant — all dishes from a specific restaurant ───────────────
+exports.getRestaurantDishes = async (req, res) => {
+    try {
+        const { name, lat, lng } = req.query;
+
+        if (!name || !lat || !lng) {
+            return res.status(400).json({ error: 'name, lat, and lng are required.' });
+        }
+
+        const latitude  = parseFloat(lat);
+        const longitude = parseFloat(lng);
+
+        if (isNaN(latitude) || isNaN(longitude)) {
+            return res.status(400).json({ error: 'Invalid lat/lng.' });
+        }
+
+        const results = await Dish.aggregate([
+            {
+                $geoNear: {
+                    near:          { type: 'Point', coordinates: [longitude, latitude] },
+                    distanceField: 'distance',
+                    maxDistance:   75000,
+                    spherical:     true,
+                },
+            },
+            {
+                $match: {
+                    restaurant_name: {
+                        $regex: new RegExp(`^${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i')
+                    }
+                }
+            },
+            { $sort: { price: 1 } },
+        ]);
+
+        res.json({ count: results.length, results });
+
+    } catch (error) {
+        console.error('Restaurant Error:', error);
+        res.status(500).json({ error: 'Server error fetching restaurant dishes.' });
+    }
+};
+
